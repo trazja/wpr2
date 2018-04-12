@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="tryhut.wpr.MainActivity">
+
+    <Button
+        android:id="@+id/routeButton"
+        android:layout_width="141dp"
+        android:layout_height="126dp"
+        android:layout_marginBottom="52dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Trasa"
+        app:layout_constraintBottom_toTopOf="@+id/MapButton"
+        app:layout_constraintEnd_toStartOf="@+id/placesGeneralButton"
+        app:layout_constraintHorizontal_bias="0.634"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/MapButton"
+        android:layout_width="144dp"
+        android:layout_height="128dp"
+        android:layout_marginBottom="92dp"
+        android:layout_marginStart="60dp"
+        android:cornerRadius="4px"
+        android:text="Mapa"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/placesGeneralButton"
+        android:layout_width="125dp"
+        android:layout_height="124dp"
+        android:layout_marginBottom="44dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginTop="8dp"
+        android:text="Miejsca"
+        app:layout_constraintBottom_toTopOf="@+id/WarningButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.942" />
+
+    <Button
+        android:id="@+id/WarningButton"
+        android:layout_width="146dp"
+        android:layout_height="126dp"
+        android:layout_marginBottom="92dp"
+        android:text="Ostrzeżenia"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="218dp" />
+
+</android.support.constraint.ConstraintLayout>
