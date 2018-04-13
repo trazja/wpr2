@@ -27,7 +27,6 @@
         android:layout_height="128dp"
         android:layout_marginBottom="92dp"
         android:layout_marginStart="60dp"
-        android:cornerRadius="4px"
         android:text="Mapa"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -52,6 +51,7 @@
         android:layout_marginBottom="92dp"
         android:text="Ostrzeżenia"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         tools:layout_editor_absoluteX="218dp" />
 
 </android.support.constraint.ConstraintLayout>
