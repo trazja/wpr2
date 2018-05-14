@@ -1,13 +1,15 @@
-package tryhut.wpr;
+package tryhut.wpr.PlacesMenuActivities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class FoodtruckActivity extends AppCompatActivity {
+import tryhut.wpr.R;
+
+public class ViewpointsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_foodtruck);
+        setContentView(R.layout.activity_viewpoints);
     }
 }

@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Rowerem po... Wrocławiu</string>
 
@@ -7,5 +8,6 @@
     <string name="it_name">Informacja turystyczna</string>
     <string name="services_name">Serwisy rowerowe</string>
     <string name="viewpoints_name">Punkty widokowe</string>
-    <string name="wc_name">Stojaki Parkingi WC</string>
+    <string name="wc_name">Stojaki<br>Parkingi</br><br>WC</br></string>
+
 </resources>

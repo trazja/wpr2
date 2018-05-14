@@ -1,8 +1,10 @@
-package tryhut.wpr;
+package tryhut.wpr.PlacesMenuActivities;
 
 import android.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import tryhut.wpr.R;
 
 public class PlacesActivity extends AppCompatActivity {
 

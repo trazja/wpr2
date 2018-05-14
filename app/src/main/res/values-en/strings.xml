@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Bike around... Wroclaw</string>
+
+    <!-- activity places menu strings-->
+    <string name="places_name">Interesting Places</string>
+    <string name="foodtruck_name">FoodTrucks</string>
+    <string name="it_name">Tourist information</string>
+    <string name="services_name">Bike services</string>
+    <string name="viewpoints_name">Viewpoints</string>
+    <string name="wc_name">Stands<br>Parkings</br><br>WC</br></string>
+</resources>

@@ -1,55 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
-<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mainMenu"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:columnCount="2"
-    android:numColumns="auto_fit"
-    android:rowCount="3"
     android:theme="@style/AppThemeWithNoBar"
     tools:context="tryhut.wpr.PlacesMenuActivity">
 
-    <Button
-        android:id="@+id/placesButton"
+    <android.support.constraint.Guideline
+        android:id="@+id/vertical_guidline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="fill"
-        android:text="button1" />
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/horizontal_guidline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.33" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/horizontal_guidline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.66" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/horizontal_guidline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="1" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/foodtruck_name"
+        app:layout_constraintBottom_toTopOf="@id/horizontal_guidline2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/vertical_guidline"
+        app:layout_constraintTop_toTopOf="@id/horizontal_guidline" />
+
+    <Button
+        android:id="@+id/foodtruckButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/button_selector"
+        android:text="@string/foodtruck_name"
+        app:layout_constraintBottom_toTopOf="@id/horizontal_guidline2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/vertical_guidline"
+        app:layout_constraintTop_toTopOf="@id/horizontal_guidline" />
+
+
+
+
+    <Button
+        android:id="@+id/placesButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/button_selector"
+        android:text="@string/places_name"
+        app:layout_constraintBottom_toTopOf="@id/horizontal_guidline"
+        app:layout_constraintEnd_toStartOf="@id/vertical_guidline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/viewpointsButton"
-        android:layout_width="wrap_content"
-
-        android:layout_height="wrap_content"
-        android:text="button1" />
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/button_selector"
+        android:text="@string/viewpoints_name"
+        app:layout_constraintBottom_toTopOf="@id/horizontal_guidline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/vertical_guidline"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/itButton"
-        android:layout_width="wrap_content"
-
-        android:layout_height="wrap_content"
-        android:text="button1" />
-
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/button_selector"
+        android:text="@string/it_name"
+        app:layout_constraintBottom_toTopOf="@id/horizontal_guidline2"
+        app:layout_constraintEnd_toStartOf="@id/vertical_guidline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/horizontal_guidline" />
 
     <Button
-        android:id="@+id/foodtrucksButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="button1" />
+        android:id="@+id/servicesButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/button_selector"
+        android:text="@string/services_name"
+        app:layout_constraintBottom_toTopOf="@id/horizontal_guidline3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/vertical_guidline"
+        app:layout_constraintTop_toTopOf="@+id/horizontal_guidline2" />
 
     <Button
         android:id="@+id/wcButton"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/button_selector"
+        android:text="@string/wc_name"
+        app:layout_constraintBottom_toTopOf="@+id/horizontal_guidline3"
+        app:layout_constraintEnd_toStartOf="@id/vertical_guidline"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/horizontal_guidline2"
+        app:layout_constraintVertical_bias="0.0" />
 
-        android:layout_height="wrap_content"
-        android:text="button1" />
-
-    <Button
-        android:id="@+id/serviceButton"
-        android:layout_width="wrap_content"
-
-        android:layout_height="wrap_content"
-        android:text="button1" />
-</GridLayout>
+</android.support.constraint.ConstraintLayout>

@@ -8,6 +8,12 @@ import android.widget.Button;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import tryhut.wpr.PlacesMenuActivities.FoodtruckActivity;
+import tryhut.wpr.PlacesMenuActivities.ItActivity;
+import tryhut.wpr.PlacesMenuActivities.PlacesActivity;
+import tryhut.wpr.PlacesMenuActivities.ServicesActivity;
+import tryhut.wpr.PlacesMenuActivities.ViewpointsActivity;
+import tryhut.wpr.PlacesMenuActivities.WcActivity;
 
 
 public class PlacesMenuActivity extends AppCompatActivity {
@@ -48,7 +54,7 @@ public class PlacesMenuActivity extends AppCompatActivity {
             }
         });
 
-        Button foodtrucksButton = findViewById(R.id.foodtrucksButton);
+        Button foodtrucksButton = findViewById(R.id.foodtruckButton);
         foodtrucksButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -66,7 +72,7 @@ public class PlacesMenuActivity extends AppCompatActivity {
             }
         });
 
-        Button servicesButton = findViewById(R.id.serviceButton);
+        Button servicesButton = findViewById(R.id.servicesButton);
         servicesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

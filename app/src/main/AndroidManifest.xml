@@ -17,16 +17,17 @@
             </intent-filter>
         </activity>
         <activity android:name=".SplashScreenActivity" />
-        <activity android:name=".PlacesActivity" />
-        <activity android:name=".ViewpointsActivity" />
-        <activity android:name=".ItActivity" />
-        <activity android:name=".FoodtruckActivity" />
-        <activity android:name=".WcActivity" />
+        <activity android:name=".PlacesMenuActivities.PlacesActivity" />
+        <activity android:name=".PlacesMenuActivities.ViewpointsActivity" />
+        <activity android:name=".PlacesMenuActivities.ItActivity" />
+        <activity android:name=".PlacesMenuActivities.FoodtruckActivity" />
+        <activity android:name=".PlacesMenuActivities.WcActivity" />
         <activity
-            android:name=".ServicesActivity"
+            android:name=".PlacesMenuActivities.ServicesActivity"
             android:label="@string/places_name"
             android:theme="@style/AppTheme.ActionBar" />
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".SelectNavigationOrGuideActivity"></activity>
     </application>
 
 </manifest>

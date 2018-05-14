@@ -1,7 +1,9 @@
-package tryhut.wpr;
+package tryhut.wpr.PlacesMenuActivities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import tryhut.wpr.R;
 
 public class WcActivity extends AppCompatActivity {
 
