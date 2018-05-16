@@ -8,4 +8,5 @@
     <string name="services_name">Serwisy rowerowe</string>
     <string name="viewpoints_name">Punkty widokowe</string>
     <string name="wc_name">Stojaki Parkingi WC</string>
+    <string name="title_activity_maps">Map</string>
 </resources>

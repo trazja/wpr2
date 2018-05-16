@@ -31,7 +31,7 @@ private class ActivityStarter extends Thread {
         }
 
         // Włącz główną aktywność
-        Intent intent = new Intent(SplashScreenActivity.this, PlacesMenuActivity.class);
+        Intent intent = new Intent(SplashScreenActivity.this, SelectNavigationOrGuideActivity.class);
         SplashScreenActivity.this.startActivity(intent);
         SplashScreenActivity.this.finish();
     }

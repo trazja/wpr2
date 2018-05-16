@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:theme="@style/AppThemeWithNoBar"
-    tools:context="tryhut.wpr.PlacesMenuActivity">
+    tools:context="tryhut.wpr.MainMenuActivities.PlacesMenuActivity">
 
     <android.support.constraint.Guideline
         android:id="@+id/vertical_guidline"

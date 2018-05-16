@@ -1,4 +1,4 @@
-package tryhut.wpr;
+package tryhut.wpr.MainMenuActivities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,28 +6,25 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
 import tryhut.wpr.PlacesMenuActivities.FoodtruckActivity;
 import tryhut.wpr.PlacesMenuActivities.ItActivity;
 import tryhut.wpr.PlacesMenuActivities.PlacesActivity;
 import tryhut.wpr.PlacesMenuActivities.ServicesActivity;
 import tryhut.wpr.PlacesMenuActivities.ViewpointsActivity;
 import tryhut.wpr.PlacesMenuActivities.WcActivity;
+import tryhut.wpr.R;
 
 
 public class PlacesMenuActivity extends AppCompatActivity {
 
-    @BindView(R.id.placesButton)
-    Button placesButton;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_places_menu);
 
-        ButterKnife.bind(this);
-
+        Button placesButton = findViewById(R.id.placesButton);
         placesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
