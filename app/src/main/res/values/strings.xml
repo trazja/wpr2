@@ -1,5 +1,8 @@
 <resources>
-    <string name="app_name">Rowerem po... Wrocławiu</string>
+    <string name="app_name">Rowerem po...</string>
+    <string name="app_name_city">Wrocławiu!</string>
+    <string name="app_name_small">Rowerem po... Wrocławiu!</string>
+
 
     <!-- activity places menu strings-->
     <string name="places_name">Ciekawe Miejsca</string>
@@ -8,5 +11,27 @@
     <string name="services_name">Serwisy rowerowe</string>
     <string name="viewpoints_name">Punkty widokowe</string>
     <string name="wc_name">Stojaki Parkingi WC</string>
-    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_maps">Mapa</string>
+    <string name="title_activity_login">Sign in</string>
+    <string name="navigation">Nawigacja</string>
+    <string name="guide">Przewodnik</string>
+    <string name="route">Trasy</string>
+    <string name="places">Miejsca</string>
+    <string name="warnings">Ostrzeżenia</string>
+
+
+    <!-- Strings related to login and register -->
+    <string name="register">Zarejestruj się</string>
+    <string name="no_account">Nie masz jeszcze konta?</string>
+    <string name="login">Zaloguj się</string>
+    <string name="password">Hasło</string>
+    <string name="confirm_password">Powtórz hasło</string>
+    <string name="user_name">Login</string>
+    <string name="email">E-mail</string>
+    <string name="first_name">Imię</string>
+    <string name="last_name">Nazwisko</string>
+    <string name="login_correct">Zalogowano pomyślnie</string>
+    <string name="login_incorrect">Błędny login lub hasło</string>
+    <string name="passwords_not_equal">Podane hasła nie są identyczne</string>
+    <string name="registration_ok">Pomyślnie zarejestrowano</string>
 </resources>

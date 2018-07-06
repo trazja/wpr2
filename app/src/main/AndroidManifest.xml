@@ -9,6 +9,11 @@
     -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -24,21 +29,26 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".PlacesMenuActivities.PlacesActivity"
+        <activity
+            android:name=".PlacesMenuActivities.PlacesActivity"
             android:label="@string/places_name"
             android:theme="@style/AppTheme.ActionBar" />
-        <activity android:name=".PlacesMenuActivities.ViewpointsActivity"
+        <activity
+            android:name=".PlacesMenuActivities.ViewpointsActivity"
             android:label="@string/viewpoints_name"
-            android:theme="@style/AppTheme.ActionBar"/>
-        <activity android:name=".PlacesMenuActivities.ItActivity"
+            android:theme="@style/AppTheme.ActionBar" />
+        <activity
+            android:name=".PlacesMenuActivities.ItActivity"
             android:label="@string/it_name"
-            android:theme="@style/AppTheme.ActionBar"/>
-        <activity android:name=".PlacesMenuActivities.FoodtruckActivity"
+            android:theme="@style/AppTheme.ActionBar" />
+        <activity
+            android:name=".PlacesMenuActivities.FoodtruckActivity"
             android:label="@string/foodtruck_name"
-            android:theme="@style/AppTheme.ActionBar"/>
-        <activity android:name=".PlacesMenuActivities.WcActivity"
+            android:theme="@style/AppTheme.ActionBar" />
+        <activity
+            android:name=".PlacesMenuActivities.WcActivity"
             android:label="@string/wc_name"
-            android:theme="@style/AppTheme.ActionBar"/>
+            android:theme="@style/AppTheme.ActionBar" />
         <activity
             android:name=".PlacesMenuActivities.ServicesActivity"
             android:label="@string/services_name"
@@ -58,10 +68,16 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
 
         <activity
             android:name=".MainMenuActivities.MapsActivity"
-            android:label="@string/title_activity_maps"></activity>
+            android:label="@string/title_activity_maps" />
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/title_activity_login"></activity>
     </application>
 
 </manifest>

@@ -24,5 +24,14 @@ public class SelectNavigationOrGuideActivity extends AppCompatActivity {
                 SelectNavigationOrGuideActivity.this.startActivity(guideIntent);
             }
         });
+/*
+        Button naviButton = findViewById(R.id.naviButton);
+        guideButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent naviIntent = new Intent(SelectNavigationOrGuideActivity.this, NavigationActivity.class);
+                SelectNavigationOrGuideActivity.this.startActivity(naviIntent);
+            }
+        });*/
     }
 }
