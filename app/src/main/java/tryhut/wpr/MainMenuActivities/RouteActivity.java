@@ -1,14 +1,14 @@
 package tryhut.wpr.MainMenuActivities;
 
-import android.app.ActionBar;
 import android.app.FragmentTransaction;
+import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import tryhut.wpr.R;
 
 
-public class RouteActivity extends AppCompatActivity {
+public class RouteActivity extends FragmentActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

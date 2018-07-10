@@ -37,4 +37,7 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Strings related to map -->
+    <string name="filtr_map">Filtruj</string>
 </resources>

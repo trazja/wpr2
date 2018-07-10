@@ -8,7 +8,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import tryhut.wpr.R;
 
 /**
@@ -33,7 +32,7 @@ public class RouteFragment extends Fragment {
             routeNames[i] = Route.routes[i].getName();
         }
 
-        double[] routeKms = new double[Route.routes.length];
+        String[] routeKms = new String[Route.routes.length];
         for (int i = 0; i <routeKms.length; i++) {
             routeKms[i] = Route.routes[i].getKm();
         }

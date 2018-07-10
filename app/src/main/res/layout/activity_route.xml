@@ -32,6 +32,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/route_fragment">
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            class="tryhut.wpr.MainMenuActivities.RouteFragment"/></FrameLayout>
     </ScrollView>
 
 </android.support.constraint.ConstraintLayout>

@@ -8,11 +8,11 @@ import tryhut.wpr.R;
 
 public class Route {
     private String name;
-    private double km;
+    private String km;
     private String level;
     private int imageResourceId;
 
-    private Route (String name, double km, String level, int imageResourceId) {
+    private Route (String name, String km, String level, int imageResourceId) {
         this.name = name;
         this.km = km;
         this.level = level;
@@ -20,10 +20,10 @@ public class Route {
     }
 
     public static final Route[] routes = {
-            new Route("Grobla Kozanowska", 22.85, "średnia", R.drawable.front1),
-            new Route("Okolice Dworca Głównego PKP", 22.85, "łatwa", R.drawable.front2),
-            new Route("Stare Miasto", 22.85, "łatwa", R.drawable.front3),
-            new Route("Wielka Wyspa i wieża w Kotowicach", 22.85, "trudna", R.drawable.front4),
+            new Route("Grobla Kozanowska", "22.85", "średnia", R.drawable.front1),
+            new Route("Okolice Dworca Głównego PKP", "22.85", "łatwa", R.drawable.front2),
+            new Route("Stare Miasto", "22.85", "łatwa", R.drawable.front3),
+            new Route("Wielka Wyspa i wieża w Kotowicach", "22.85", "trudna", R.drawable.front4),
 
     };
 
@@ -31,7 +31,7 @@ public class Route {
         return name;
     }
 
-    public double getKm() {
+    public String getKm() {
         return km;
     }
 
@@ -42,4 +42,6 @@ public class Route {
     public int getImageResourceId() {
         return imageResourceId;
     }
+
+
 }

@@ -17,11 +17,11 @@ import tryhut.wpr.R;
 class CaptionedImagesAdapter extends RecyclerView.Adapter<CaptionedImagesAdapter.ViewHolder> {
 
     private String [] routeNames;
-    private double [] kms;
+    private String [] kms;
     private String [] levels;
     private int [] imageIds;
 
-    public CaptionedImagesAdapter(String[] routeNames, double[] kms, String[] levels, int[] imageIds) {
+    public CaptionedImagesAdapter(String[] routeNames, String[] kms, String[] levels, int[] imageIds) {
         this.routeNames = routeNames;
         this.kms = kms;
         this.levels = levels;
@@ -55,14 +55,14 @@ class CaptionedImagesAdapter extends RecyclerView.Adapter<CaptionedImagesAdapter
    textView.setText(routeNames[position]);
 
    TextView textView2 = (TextView)cardView.findViewById(R.id.route_km);
-   textView.setText(routeNames[position]);
+   textView.setText(kms[position]);
 
 
    TextView textView3 = (TextView)cardView.findViewById(R.id.route_level);
-   textView.setText(routeNames[position]);
+   textView.setText(levels[position]);
 
    ImageView imageView = (ImageView)cardView.findViewById(R.id.route_img);
-   Drawable drawable = cardView.getResources().getDrawable(imageIds[position]);
+   Drawable drawable = cardView.getResources().getDrawable(imageIds[position],null);
    imageView.setImageDrawable(drawable);
 
 }

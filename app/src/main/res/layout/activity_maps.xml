@@ -1,3 +1,8 @@
+<RelativeLayout android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
 <fragment xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:map="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -6,3 +11,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="tryhut.wpr.MainMenuActivities.MapsActivity" />
+
+    <Button
+        android:id="@+id/filtrButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="111dp"
+        android:background="@drawable/simple_button"
+        android:text="@string/filtr_map"
+        android:textColor="@color/textColor"
+        android:textStyle="bold" />
+    </RelativeLayout>
