@@ -29,16 +29,17 @@ import java.util.List;
 
 import static android.Manifest.permission.READ_CONTACTS;
 
-/**
- * A login screen that offers login via email/password.
- */
+
 public class LoginActivity extends AppCompatActivity {
+
+    DatabaseHelper helper = new DatabaseHelper(this);
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-           final EditText userName = (EditText) findViewById(R.id.login);
+        final EditText userName = (EditText) findViewById(R.id.login);
         final EditText userPassword = (EditText) findViewById(R.id.loginPassword);
         final TextView registerLink = (TextView) findViewById(R.id.registerLink);
 
@@ -63,23 +64,18 @@ public class LoginActivity extends AppCompatActivity {
                 final String login = userName.getText().toString();
                 final String password = userPassword.getText().toString();
 
-                //na razie zrobiłam tylko takiego if'a, żeby w ogóle dało radę się zalogować - nie bardzo wiem, w jaki sposób zrobić tutaj
-                //bazę użytkowników
+                String pass = helper.searchPass(login);
+                if (password.equals(pass)) {
 
-                if (login.equals("admin") && password.equals("admin")) {
-
-                    Toast.makeText(LoginActivity.this, R.string.login_correct, Toast.LENGTH_SHORT).show();
-
-                    Intent selectRouteIntent = new Intent(LoginActivity.this, SelectNavigationOrGuideActivity.class);
-                    startActivity(selectRouteIntent);
-
-
-                } else {
-
-                    Toast.makeText(LoginActivity.this, R.string.login_incorrect, Toast.LENGTH_SHORT).show();
+                    Intent mainIntent = new Intent(LoginActivity.this, SelectNavigationOrGuideActivity.class);
+                    mainIntent.putExtra("Użytkownik", login);
+                    LoginActivity.this.startActivity(mainIntent);
                 }
-
-
+                else
+                {
+                    Toast temp = Toast.makeText(LoginActivity.this, "Username and password don't match!", Toast.LENGTH_SHORT );
+                    temp.show();
+                }
             }
         });
     }

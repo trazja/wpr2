@@ -8,16 +8,17 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class RegisterActivity extends AppCompatActivity {
+DatabaseHelper helper = new DatabaseHelper(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        EditText nameText = (EditText) findViewById(R.id.nameText);
-        EditText lastNameText = (EditText) findViewById(R.id.lastNameText);
-        EditText userName = (EditText) findViewById(R.id.userName);
-        EditText emailText = (EditText) findViewById(R.id.emailText);
+        final EditText nameText = (EditText) findViewById(R.id.nameText);
+        final EditText lastNameText = (EditText) findViewById(R.id.lastNameText);
+        final EditText userName = (EditText) findViewById(R.id.userName);
+        final EditText emailText = (EditText) findViewById(R.id.emailText);
         final EditText passwordRegisterText = (EditText) findViewById(R.id.passwordRegisterText);
         final EditText confirmPassword = (EditText) findViewById(R.id.confirmPassword);
 
@@ -27,17 +28,31 @@ public class RegisterActivity extends AppCompatActivity {
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (passwordRegisterText.equals(confirmPassword)){
+                String s1 = nameText.getText().toString();
+                String s2 = lastNameText.getText().toString();
+                String s3 = userName.getText().toString();
+                String s4 = emailText.getText().toString();
+                String s5 = passwordRegisterText.getText().toString();
+                String s6 = confirmPassword.getText().toString();
 
-                    Toast.makeText(RegisterActivity.this, R.string.registration_ok, Toast.LENGTH_SHORT).show();
+                if(!passwordRegisterText.equals(confirmPassword)){
+                    Toast pass = Toast.makeText(RegisterActivity.this, "Hasła nie są identyczne!", Toast.LENGTH_SHORT);
+                    pass.show();
+                }else {
+                    //insert
+                    Contact u = new Contact ();
+                    u.setName(s1);
+                    u.setLastName(s2);
+                    u.setUserName(s3);
+                    u.setEmail(s4);
+                    u.setPassword(s5);
 
-                } else {
-
-                    Toast.makeText(RegisterActivity.this, R.string.passwords_not_equal, Toast.LENGTH_SHORT).show();
+                    helper.insertContact(u);
                 }
-            }
+
+                 }
         });
-
-
     }
+
+
 }
