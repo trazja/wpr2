@@ -35,7 +35,7 @@ DatabaseHelper helper = new DatabaseHelper(this);
                 String s5 = passwordRegisterText.getText().toString();
                 String s6 = confirmPassword.getText().toString();
 
-                if(!passwordRegisterText.equals(confirmPassword)){
+                if(!s5.equals(s6)){
                     Toast pass = Toast.makeText(RegisterActivity.this, "Hasła nie są identyczne!", Toast.LENGTH_SHORT);
                     pass.show();
                 }else {

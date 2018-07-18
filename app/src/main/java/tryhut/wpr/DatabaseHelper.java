@@ -52,7 +52,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     public String searchPass(String userName) {
         db = this.getReadableDatabase();
-        String query = "SELECT USERNAME, PASSWORD FROM" + TABLE_NAME;
+        String query = "SELECT USERNAME, PASSWORD FROM " + TABLE_NAME;
         String a, b; //a username, b password
         b = "not found";
         Cursor cursor = db.rawQuery(query, null);
@@ -74,7 +74,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        String query = "DROP TABLE IF EXISTS" + TABLE_NAME;
+        String query = "DROP TABLE IF EXISTS " + TABLE_NAME;
         db.execSQL(query);
         this.onCreate(db);
     }
