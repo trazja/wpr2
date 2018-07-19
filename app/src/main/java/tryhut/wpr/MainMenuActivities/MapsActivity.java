@@ -1,5 +1,6 @@
 package tryhut.wpr.MainMenuActivities;
 
+import android.graphics.Color;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -47,8 +48,24 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
+        LatLng wroclaw = new LatLng(51.132, 16.989);
+        mMap.addMarker(new MarkerOptions().position(wroclaw).title("Marker in Sydney"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(wroclaw, 12));
 
-        GPXParser mParser = new GPXParser();
+   //     mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(51.13265, 16.98965), 4));
+
+        Polyline line = mMap.addPolyline(new PolylineOptions()
+                .add(new LatLng(51.13265, 16.98967), new LatLng(51.13265, 16.98968))
+                .width(25)
+                .color(Color.BLUE)
+                .geodesic(true));
+
+
+      //  PolylineOptions polylineOptions = new PolylineOptions()
+     //           .clickable(true);
+     //   Polyline polyline1 = mMap.addPolyline(polylineOptions);
+
+
         Gpx parsedGpx = null;
         try {
             InputStream in = getAssets().open("Grobla-Kozanowska.gpx");
@@ -70,30 +87,25 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             TrackSegment trackSegment = trackSegmensList.get(0);
             List<TrackPoint> trackPointList = trackSegment.getTrackPoints();
 
-             PolylineOptions polylineOptions =  new PolylineOptions()
-                    .clickable(true) ;
-            Polyline polyline1 = googleMap.addPolyline(polylineOptions);
 
-            for (int l=0;l<trackPointList.size();l++)
-            {
+
+
+            for (int l = 0; l < trackPointList.size(); l++) {
                 TrackPoint trackPoint = trackPointList.get(l);
                 double latitude = trackPoint.getLatitude();
                 double longitude = trackPoint.getLongitude();
 
-                polylineOptions.add(
-                        new LatLng(trackPoint.getLatitude(),trackPoint.getLongitude()));
-            }
 
 
-
-//polyline1.add(trackPoint.getLatitude(),trackPoint.getLongitude());
-
-
-
-            // do something with the parsed track
+            Polyline grobla = mMap.addPolyline(new PolylineOptions().add(
+                    new LatLng(trackPoint.getLatitude(), trackPoint.getLongitude()))
+                    .width(100)
+                    .color(Color.RED)
+                    .geodesic(true));
         }
-        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(51.13265, 16.98965), 4));
-    }
 
+        }
+
+    }
 
 }
