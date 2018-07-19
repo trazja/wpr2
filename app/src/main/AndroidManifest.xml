@@ -52,11 +52,7 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".SelectNavigationOrGuideActivity" />
         <activity android:name=".MainMenuActivities.RouteActivity"  >
-        <intent-filter>
-        <action android:name="android.intent.action.MAIN" />
 
-        <category android:name="android.intent.category.LAUNCHER" />
-    </intent-filter>/>
         </activity>
         <activity android:name=".MainMenuActivities.WarningsActivity" />
         <!--
@@ -75,8 +71,14 @@
             android:resource="@array/preloaded_fonts" />
 
         <activity
-            android:name=".MainMenuActivities.MapsActivity"
-            android:label="@string/title_activity_maps" />
+            android:name=".MainMenuActivities.MapsActivity">
+            android:label="@string/title_activity_maps"
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>/>
+        </activity>
         <activity
             android:name=".LoginActivity"
             android:label="@string/title_activity_login"></activity>
