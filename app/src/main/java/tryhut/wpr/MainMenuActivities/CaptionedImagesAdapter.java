@@ -55,11 +55,11 @@ class CaptionedImagesAdapter extends RecyclerView.Adapter<CaptionedImagesAdapter
    textView.setText(routeNames[position]);
 
    TextView textView2 = (TextView)cardView.findViewById(R.id.route_km);
-   textView.setText(kms[position]);
+   textView2.setText(kms[position]);
 
 
    TextView textView3 = (TextView)cardView.findViewById(R.id.route_level);
-   textView.setText(levels[position]);
+   textView3.setText(levels[position]);
 
    ImageView imageView = (ImageView)cardView.findViewById(R.id.route_img);
    Drawable drawable = cardView.getResources().getDrawable(imageIds[position],null);

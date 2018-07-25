@@ -61,7 +61,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .geodesic(true));
 
 
-      //  PolylineOptions polylineOptions = new PolylineOptions()
+
      //           .clickable(true);
      //   Polyline polyline1 = mMap.addPolyline(polylineOptions);
 
@@ -88,21 +88,21 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             List<TrackPoint> trackPointList = trackSegment.getTrackPoints();
 
 
-
+            PolylineOptions poliOptions = new PolylineOptions();
 
             for (int l = 0; l < trackPointList.size(); l++) {
                 TrackPoint trackPoint = trackPointList.get(l);
                 double latitude = trackPoint.getLatitude();
                 double longitude = trackPoint.getLongitude();
 
+                poliOptions.add(new LatLng(trackPoint.getLatitude(), trackPoint.getLongitude()));
+            }
 
-
-            Polyline grobla = mMap.addPolyline(new PolylineOptions().add(
-                    new LatLng(trackPoint.getLatitude(), trackPoint.getLongitude()))
-                    .width(100)
-                    .color(Color.RED)
-                    .geodesic(true));
-        }
+            Polyline grobla = mMap.addPolyline(
+                    poliOptions
+                            .width(10)
+                            .color(Color.RED)
+                            .geodesic(true));
 
         }
 
