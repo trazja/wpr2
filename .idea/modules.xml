@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/WPR.iml" filepath="$PROJECT_DIR$/WPR.iml" />
       <module fileurl="file://C:\Users\at\AndroidStudioProjects\wpr2\WPR.iml" filepath="C:\Users\at\AndroidStudioProjects\wpr2\WPR.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/wpr2.iml" filepath="$PROJECT_DIR$/wpr2.iml" />
+      <module fileurl="file://C:\Users\tryhu\AndroidStudioProjects\WPR\wpr2.iml" filepath="C:\Users\tryhu\AndroidStudioProjects\WPR\wpr2.iml" />
     </modules>
   </component>
 </project>

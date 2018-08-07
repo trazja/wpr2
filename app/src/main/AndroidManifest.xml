@@ -22,9 +22,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppThemeWithNoBar">
         <activity android:name=".MainMenuActivities.PlacesMenuActivity" />
-        <activity android:name=".SplashScreenActivity">
-
-        </activity>
+        <activity android:name=".SplashScreenActivity" />
         <activity
             android:name=".PlacesMenuActivities.PlacesActivity"
             android:label="@string/places_name"
@@ -51,12 +49,15 @@
             android:theme="@style/AppTheme.ActionBar" />
         <activity android:name=".MainActivity" />
         <activity android:name=".SelectNavigationOrGuideActivity" />
-        <activity android:name=".MainMenuActivities.RouteActivity"  >
+        <activity android:name=".MainMenuActivities.RouteActivity"
+            android:label="@string/route"
+            android:theme="@style/AppTheme.ActionBar"  >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>/>
+            </intent-filter>
+            />
         </activity>
         <activity android:name=".MainMenuActivities.WarningsActivity" />
         <!--
@@ -74,17 +75,16 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
-        <activity
-            android:name=".MainMenuActivities.MapsActivity">
+        <activity android:name=".MainMenuActivities.MapsActivity">
             android:label="@string/title_activity_maps"
-
         </activity>
         <activity
             android:name=".LoginActivity"
-            android:label="@string/title_activity_login"></activity>
+            android:label="@string/title_activity_login" />
         <activity
             android:name=".RegisterActivity"
-            android:label="@string/title_activity_login"></activity>
+            android:label="@string/title_activity_login" />
+        <activity android:name=".RouteDetailsActivity"></activity>
     </application>
 
 </manifest>
