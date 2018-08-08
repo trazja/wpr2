@@ -5,6 +5,7 @@ import android.app.FragmentTransaction;
 import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.SearchView;
 import android.widget.Toolbar;
 
 import tryhut.wpr.R;
@@ -22,6 +23,10 @@ public class RouteActivity extends AppCompatActivity {
         FragmentTransaction transaction = getFragmentManager().beginTransaction();
         transaction.add(R.id.route_fragment, fragment);
         transaction.commit();
+
+        SearchView routeSearchView = (SearchView) findViewById(R.id.routeSearchView);
+        routeSearchView.setQueryHint("Szukaj");
+
 
     }
 }

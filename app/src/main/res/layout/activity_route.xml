@@ -7,7 +7,7 @@
     tools:context="tryhut.wpr.MainMenuActivities.RouteActivity">
 
     <SearchView
-        android:id="@+id/searchView"
+        android:id="@+id/routeSearchView"
         android:layout_width="369dp"
         android:layout_height="36dp"
         android:layout_marginBottom="8dp"
@@ -19,27 +19,30 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.006" />
+        app:layout_constraintVertical_bias="0.006"
+        android:iconifiedByDefault="false"/>
 
     <ScrollView
         android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="474dp"
-        android:layout_marginBottom="16dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent">
 
         <FrameLayout
+            android:id="@+id/route_fragment"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/route_fragment">
-        <fragment
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            class="tryhut.wpr.MainMenuActivities.RouteFragment"/></FrameLayout>
+            android:layout_height="wrap_content">
+
+            <fragment
+                class="tryhut.wpr.MainMenuActivities.RouteFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </FrameLayout>
     </ScrollView>
 
 </android.support.constraint.ConstraintLayout>

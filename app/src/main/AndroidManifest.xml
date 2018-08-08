@@ -17,41 +17,53 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="@string/app_name_small"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppThemeWithNoBar">
-        <activity android:name=".MainMenuActivities.PlacesMenuActivity" />
+        <activity
+            android:name=".MainMenuActivities.PlacesMenuActivity"
+            android:parentActivityName=".MainActivity" />
         <activity android:name=".SplashScreenActivity" />
         <activity
             android:name=".PlacesMenuActivities.PlacesActivity"
             android:label="@string/places_name"
+            android:parentActivityName=".MainMenuActivities.PlacesMenuActivity"
             android:theme="@style/AppTheme.ActionBar" />
         <activity
             android:name=".PlacesMenuActivities.ViewpointsActivity"
             android:label="@string/viewpoints_name"
+            android:parentActivityName=".MainMenuActivities.PlacesMenuActivity"
             android:theme="@style/AppTheme.ActionBar" />
         <activity
             android:name=".PlacesMenuActivities.ItActivity"
             android:label="@string/it_name"
+            android:parentActivityName=".MainMenuActivities.PlacesMenuActivity"
             android:theme="@style/AppTheme.ActionBar" />
         <activity
             android:name=".PlacesMenuActivities.FoodtruckActivity"
             android:label="@string/foodtruck_name"
+            android:parentActivityName=".MainMenuActivities.PlacesMenuActivity"
             android:theme="@style/AppTheme.ActionBar" />
         <activity
             android:name=".PlacesMenuActivities.WcActivity"
             android:label="@string/wc_name"
+            android:parentActivityName=".MainMenuActivities.PlacesMenuActivity"
             android:theme="@style/AppTheme.ActionBar" />
         <activity
             android:name=".PlacesMenuActivities.ServicesActivity"
             android:label="@string/services_name"
+            android:parentActivityName=".MainMenuActivities.PlacesMenuActivity"
             android:theme="@style/AppTheme.ActionBar" />
-        <activity android:name=".MainActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:parentActivityName=".SelectNavigationOrGuideActivity" />
         <activity android:name=".SelectNavigationOrGuideActivity" />
-        <activity android:name=".MainMenuActivities.RouteActivity"
+        <activity
+            android:name=".MainMenuActivities.RouteActivity"
             android:label="@string/route"
-            android:theme="@style/AppTheme.ActionBar"  >
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.ActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -59,7 +71,9 @@
             </intent-filter>
             />
         </activity>
-        <activity android:name=".MainMenuActivities.WarningsActivity" />
+        <activity
+            android:name=".MainMenuActivities.WarningsActivity"
+            android:parentActivityName=".MainActivity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -75,7 +89,9 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
-        <activity android:name=".MainMenuActivities.MapsActivity">
+        <activity
+            android:name=".MainMenuActivities.MapsActivity"
+            android:parentActivityName=".MainActivity">
             android:label="@string/title_activity_maps"
         </activity>
         <activity
@@ -84,7 +100,15 @@
         <activity
             android:name=".RegisterActivity"
             android:label="@string/title_activity_login" />
-        <activity android:name=".RouteDetailsActivity"></activity>
+        <activity
+            android:name=".RouteDetailsActivity"
+            android:label="@string/route"
+            android:parentActivityName=".MainMenuActivities.RouteActivity"
+            android:theme="@style/AppTheme.ActionBar" />
+        <activity
+            android:name=".DrawerActivity"
+            android:label="@string/title_activity_drawer"
+            android:theme="@style/AppThemeWithNoBar"></activity>
     </application>
 
 </manifest>

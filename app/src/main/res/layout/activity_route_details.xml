@@ -6,4 +6,27 @@
     android:layout_height="match_parent"
     tools:context="tryhut.wpr.RouteDetailsActivity">
 
-</android.support.constraint.ConstraintLayout>
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="match_parent"
+            android:layout_height="474dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/route_fragment">
+                <fragment
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    class="tryhut.wpr.MainMenuActivities.RouteFragment"/></FrameLayout>
+        </ScrollView>
+
+    </android.support.constraint.ConstraintLayout>
+
+
