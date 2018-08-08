@@ -1,5 +1,6 @@
 package tryhut.wpr;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -12,6 +13,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import tryhut.wpr.MainMenuActivities.MapsActivity;
+import tryhut.wpr.MainMenuActivities.RouteActivity;
+import tryhut.wpr.MainMenuActivities.WarningsActivity;
+import tryhut.wpr.PlacesMenuActivities.PlacesActivity;
 
 public class DrawerActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -59,20 +65,6 @@ public class DrawerActivity extends AppCompatActivity
         return true;
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
@@ -81,17 +73,20 @@ public class DrawerActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.activity_route) {
-            // Handle the camera action
+            Intent intent = new Intent(DrawerActivity.this, RouteActivity.class);
+            startActivity(intent);
         } else if (id == R.id.activity_maps) {
-
+            Intent intent2 = new Intent(DrawerActivity.this, MapsActivity.class);
+            startActivity(intent2);
         } else if (id == R.id.activity_places) {
-
+            Intent intent3 = new Intent(DrawerActivity.this, PlacesActivity.class);
+            startActivity(intent3);
         } else if (id == R.id.activity_warnings) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
+            Intent intent4 = new Intent(DrawerActivity.this, WarningsActivity.class);
+            startActivity(intent4);
+        } else if (id == R.id.settings) {
+            Intent intent5 = new Intent(DrawerActivity.this, SettingsActivity.class);
+            startActivity(intent5);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
