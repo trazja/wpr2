@@ -91,9 +91,9 @@
 
         <activity
             android:name=".MainMenuActivities.MapsActivity"
-            android:parentActivityName=".MainActivity">
             android:label="@string/title_activity_maps"
-        </activity>
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.ActionBar"></activity>
         <activity
             android:name=".LoginActivity"
             android:label="@string/title_activity_login" />
@@ -108,7 +108,10 @@
         <activity
             android:name=".DrawerActivity"
             android:label="@string/title_activity_drawer"
-            android:theme="@style/AppThemeWithNoBar"></activity>
+            android:theme="@style/AppThemeWithNoBar" />
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings"></activity>
     </application>
 
 </manifest>

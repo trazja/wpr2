@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="tryhut.wpr.MainMenuActivities.WarningsActivity">
+    tools:context="tryhut.wpr.MainMenuActivities.WarningsActivity"
+    android:id="@+id/activity_warnings">
 
 </android.support.constraint.ConstraintLayout>
