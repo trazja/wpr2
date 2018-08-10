@@ -25,11 +25,11 @@
             android:name=".MainMenuActivities.PlacesMenuActivity"
             android:parentActivityName=".MainActivity" />
         <activity android:name=".SplashScreenActivity">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".PlacesMenuActivities.PlacesActivity"
@@ -39,11 +39,6 @@
         <activity
             android:name=".PlacesMenuActivities.ViewpointsActivity"
             android:label="@string/viewpoints_name"
-            android:parentActivityName=".MainMenuActivities.PlacesMenuActivity"
-            android:theme="@style/AppTheme.ActionBar" />
-        <activity
-            android:name=".PlacesMenuActivities.ItActivity"
-            android:label="@string/it_name"
             android:parentActivityName=".MainMenuActivities.PlacesMenuActivity"
             android:theme="@style/AppTheme.ActionBar" />
         <activity
@@ -70,7 +65,6 @@
             android:label="@string/route"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.ActionBar">
-
             />
         </activity>
         <activity
@@ -95,13 +89,9 @@
             android:name=".MainMenuActivities.MapsActivity"
             android:label="@string/title_activity_maps"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.ActionBar"/>
-        <activity
-            android:name=".LoginActivity"
-             />
-        <activity
-            android:name=".RegisterActivity"
-             />
+            android:theme="@style/AppTheme.ActionBar" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".RegisterActivity" />
         <activity
             android:name=".RouteDetailsActivity"
             android:label="@string/route"
@@ -110,12 +100,11 @@
         <activity
             android:name=".DrawerActivity"
             android:label="@string/title_activity_drawer"
-            android:theme="@style/AppThemeWithNoBar">
-
-    </activity>
+            android:theme="@style/AppThemeWithNoBar"></activity>
         <activity
             android:name=".SettingsActivity"
-            android:label="@string/title_activity_settings"/>
+            android:label="@string/title_activity_settings" />
+        <activity android:name=".TouristicInformationActivity"></activity>
     </application>
 
 </manifest>

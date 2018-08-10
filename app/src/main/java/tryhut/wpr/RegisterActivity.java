@@ -10,12 +10,9 @@ import android.os.Bundle;
 import android.support.v7.widget.AppCompatButton;
 import android.support.v7.widget.AppCompatTextView;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.RelativeLayout;
-import android.widget.Toast;
 
-public class RegisterActivity extends AppCompatActivity implements View.OnClickListener{
+
+public class RegisterActivity extends AppCompatActivity implements View.OnClickListener {
     private final AppCompatActivity activity = RegisterActivity.this;
 
     private NestedScrollView nestedScrollView;
@@ -41,7 +38,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-   //     getSupportActionBar().hide();
+
 
         initViews();
         initListeners();
@@ -49,7 +46,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     }
 
     /**
-     * This method is to initialize views
+     * Inicjalizacja widoków
      */
     private void initViews() {
         nestedScrollView = (NestedScrollView) findViewById(R.id.nestedScrollView);
@@ -71,7 +68,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     }
 
     /**
-     * This method is to initialize listeners
+     * Inicjalizacja nasłuchiwaczy
      */
     private void initListeners() {
         appCompatButtonRegister.setOnClickListener(this);
@@ -80,7 +77,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     }
 
     /**
-     * This method is to initialize objects to be used
+     * Inicjalizacja klas, z których będziemy korzystać
      */
     private void initObjects() {
         inputValidation = new InputValidation(activity);
@@ -91,7 +88,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
 
     /**
-     * This implemented method is to listen the click on view
+     * Implementacja nasłuchiwacza
      *
      * @param v
      */
@@ -110,7 +107,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     }
 
     /**
-     * This method is to validate the input text fields and post data to SQLite
+     * Walidacja
      */
     private void postDataToSQLite() {
         if (!inputValidation.isInputEditTextFilled(textInputEditTextName, textInputLayoutName, getString(R.string.error_message_name))) {
@@ -138,13 +135,13 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
             databaseHelper.addUser(user);
 
-            // Snack Bar to show success message that record saved successfully
+            // Snackbar, gdy  rejestracja przebiegła pomyślnie
             Snackbar.make(nestedScrollView, getString(R.string.success_message), Snackbar.LENGTH_LONG).show();
             emptyInputEditText();
 
 
         } else {
-            // Snack Bar to show error message that record already exists
+            // Snackbar, gdy mail jest już w bazie
             Snackbar.make(nestedScrollView, getString(R.string.error_email_exists), Snackbar.LENGTH_LONG).show();
         }
 
@@ -152,7 +149,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     }
 
     /**
-     * This method is to empty all input edit text
+     * Czyszczenie pól
      */
     private void emptyInputEditText() {
         textInputEditTextName.setText(null);
@@ -160,52 +157,6 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         textInputEditTextPassword.setText(null);
         textInputEditTextConfirmPassword.setText(null);
     }
-
-//DatabaseHelper helper = new DatabaseHelper(this);
-//
-//    @Override
-//    protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_register);
-//
-//        final EditText nameText = (EditText) findViewById(R.id.nameText);
-//        final EditText lastNameText = (EditText) findViewById(R.id.lastNameText);
-//        final EditText userName = (EditText) findViewById(R.id.userName);
-//        final EditText emailText = (EditText) findViewById(R.id.emailText);
-//        final EditText passwordRegisterText = (EditText) findViewById(R.id.passwordRegisterText);
-//        final EditText confirmPassword = (EditText) findViewById(R.id.confirmPassword);
-//
-//        Button registerButton = (Button) findViewById(R.id.registerButton);
-//
-//
-//        registerButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                String s1 = nameText.getText().toString();
-//                String s2 = lastNameText.getText().toString();
-//                String s3 = userName.getText().toString();
-//                String s4 = emailText.getText().toString();
-//                String s5 = passwordRegisterText.getText().toString();
-//                String s6 = confirmPassword.getText().toString();
-//
-//                if(!s5.equals(s6)){
-//                    Toast pass = Toast.makeText(RegisterActivity.this, "Hasła nie są identyczne!", Toast.LENGTH_SHORT);
-//                    pass.show();
-//                }else {
-//                    //insert
-//                    Contact u = new Contact ();
-//                    u.setName(s1);
-//                    u.setLastName(s2);
-//                    u.setUserName(s3);
-//                    u.setEmail(s4);
-//                    u.setPassword(s5);
-//
-//                    helper.insertContact(u);
-//                }
-//
-//                 }
-//        });
-//    }
 
 
 }

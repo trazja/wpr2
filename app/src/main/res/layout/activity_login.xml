@@ -49,7 +49,8 @@
             android:text="@string/app_name_city"
             android:textColor="@color/accent"
             android:textSize="25sp"
-            android:typeface="normal" />
+            android:typeface="normal"
+            android:layout_marginStart="200dp"/>
 
         <android.support.design.widget.TextInputLayout
             android:id="@+id/textInputLayoutEmail"

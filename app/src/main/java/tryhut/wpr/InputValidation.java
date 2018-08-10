@@ -15,7 +15,7 @@ public class InputValidation {
     private Context context;
 
     /**
-     * constructor
+     * Konstruktor
      *
      * @param context
      */
@@ -24,7 +24,7 @@ public class InputValidation {
     }
 
     /**
-     * method to check InputEditText filled .
+     * Sprawdzenie czy pole jest w ogóle uzupełnione
      *
      * @param textInputEditText
      * @param textInputLayout
@@ -46,7 +46,7 @@ public class InputValidation {
 
 
     /**
-     * method to check InputEditText has valid email .
+     * Sprawdzenie, czy email ma prawidłowy format
      *
      * @param textInputEditText
      * @param textInputLayout
@@ -79,7 +79,7 @@ public class InputValidation {
     }
 
     /**
-     * method to Hide keyboard
+     * Ukrywanie klawiatury
      *
      * @param view
      */

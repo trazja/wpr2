@@ -1,15 +1,13 @@
-package tryhut.wpr.PlacesMenuActivities;
+package tryhut.wpr;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import tryhut.wpr.R;
-
-public class ItActivity extends AppCompatActivity {
+public class TouristicInformationActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_it);
+        setContentView(R.layout.activity_touristic_information);
     }
 }

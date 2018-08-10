@@ -61,7 +61,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-//        getSupportActionBar().hide();
 
         initViews();
         initListeners();
@@ -95,7 +94,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     }
 
     /**
-     * This method is to initialize objects to be used
+     * Inicjalizacja obiektów
      */
     private void initObjects() {
         databaseHelper = new DatabaseHelper(activity);
@@ -104,7 +103,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     }
 
     /**
-     * This implemented method is to listen the click on view
+     * Listenery
      *
      * @param v
      */
@@ -123,7 +122,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     }
 
     /**
-     * This method is to validate the input text fields and verify login credentials from SQLite
+     * Walidacja
      */
     private void verifyFromSQLite() {
         if (!inputValidation.isInputEditTextFilled(textInputEditTextEmail, textInputLayoutEmail, getString(R.string.error_message_email))) {
@@ -147,67 +146,16 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
 
         } else {
-            // Snack Bar to show success message that record is wrong
+
             Snackbar.make(nestedScrollView, getString(R.string.error_valid_email_password), Snackbar.LENGTH_LONG).show();
         }
     }
 
-    /**
-     * This method is to empty all input edit text
-     */
+
     private void emptyInputEditText() {
         textInputEditTextEmail.setText(null);
         textInputEditTextPassword.setText(null);
     }
 
 }
-
-//    DatabaseHelper helper = new DatabaseHelper(this);
-//
-//    @Override
-//    protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_login);
-//
-//        final EditText userName = (EditText) findViewById(R.id.login);
-//        final EditText userPassword = (EditText) findViewById(R.id.loginPassword);
-//        final TextView registerLink = (TextView) findViewById(R.id.registerLink);
-//
-//        Button loginButton = (Button) findViewById(R.id.loginButton);
-//
-//
-//        //dodanie napisu "Zarejestruj się" jako aktywnego linku, który przekierwouje do okna logowania
-//
-//        registerLink.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent registerIntent = new Intent(LoginActivity.this, RegisterActivity.class);
-//                LoginActivity.this.startActivity(registerIntent);
-//
-//            }
-//
-//        });
-//        loginButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//                final String login = userName.getText().toString();
-//                final String password = userPassword.getText().toString();
-//
-//                String pass = helper.searchPass(login);
-//                if (password.equals(pass)) {
-//
-//                    Intent mainIntent = new Intent(LoginActivity.this, SelectNavigationOrGuideActivity.class);
-//                    mainIntent.putExtra("Użytkownik", login);
-//                    LoginActivity.this.startActivity(mainIntent);
-//                }
-//                else
-//                {
-//                    Toast temp = Toast.makeText(LoginActivity.this, "Username and password don't match!", Toast.LENGTH_SHORT );
-//                    temp.show();
-//                }
-//            }
-//        });
-//    }
-
 

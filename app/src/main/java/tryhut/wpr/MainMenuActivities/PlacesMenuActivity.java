@@ -7,12 +7,13 @@ import android.view.View;
 import android.widget.Button;
 
 import tryhut.wpr.PlacesMenuActivities.FoodtruckActivity;
-import tryhut.wpr.PlacesMenuActivities.ItActivity;
 import tryhut.wpr.PlacesMenuActivities.PlacesActivity;
 import tryhut.wpr.PlacesMenuActivities.ServicesActivity;
 import tryhut.wpr.PlacesMenuActivities.ViewpointsActivity;
 import tryhut.wpr.PlacesMenuActivities.WcActivity;
 import tryhut.wpr.R;
+import tryhut.wpr.TouristicInformation;
+import tryhut.wpr.TouristicInformationActivity;
 
 
 public class PlacesMenuActivity extends AppCompatActivity {
@@ -46,7 +47,7 @@ public class PlacesMenuActivity extends AppCompatActivity {
         itButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent itIntent = new Intent(PlacesMenuActivity.this, ItActivity.class);
+                Intent itIntent = new Intent(PlacesMenuActivity.this, TouristicInformationActivity.class);
                 PlacesMenuActivity.this.startActivity(itIntent);
             }
         });
