@@ -12,6 +12,7 @@ import android.support.v7.widget.AppCompatTextView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 public class RegisterActivity extends AppCompatActivity implements View.OnClickListener{
@@ -40,7 +41,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-        getSupportActionBar().hide();
+   //     getSupportActionBar().hide();
 
         initViews();
         initListeners();

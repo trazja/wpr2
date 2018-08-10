@@ -43,6 +43,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     private NestedScrollView nestedScrollView;
 
+
     private TextInputLayout textInputLayoutEmail;
     private TextInputLayout textInputLayoutPassword;
 
@@ -60,7 +61,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        getSupportActionBar().hide();
+//        getSupportActionBar().hide();
 
         initViews();
         initListeners();
@@ -72,7 +73,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
      */
     private void initViews() {
 
-        RelativeLayout relativeLayout = (RelativeLayout) findViewById(R.id.nestedScrollView);
+        nestedScrollView = (NestedScrollView) findViewById(R.id.nestedScrollView);
         textInputLayoutEmail = (TextInputLayout) findViewById(R.id.textInputLayoutEmail);
         textInputLayoutPassword = (TextInputLayout) findViewById(R.id.textInputLayoutPassword);
 

@@ -24,7 +24,13 @@
         <activity
             android:name=".MainMenuActivities.PlacesMenuActivity"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".SplashScreenActivity" />
+        <activity android:name=".SplashScreenActivity">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
         <activity
             android:name=".PlacesMenuActivities.PlacesActivity"
             android:label="@string/places_name"
@@ -89,13 +95,13 @@
             android:name=".MainMenuActivities.MapsActivity"
             android:label="@string/title_activity_maps"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.ActionBar"></activity>
+            android:theme="@style/AppTheme.ActionBar"/>
         <activity
             android:name=".LoginActivity"
-            android:label="@string/title_activity_login" />
+             />
         <activity
             android:name=".RegisterActivity"
-            android:label="@string/title_activity_login" />
+             />
         <activity
             android:name=".RouteDetailsActivity"
             android:label="@string/route"
@@ -105,15 +111,11 @@
             android:name=".DrawerActivity"
             android:label="@string/title_activity_drawer"
             android:theme="@style/AppThemeWithNoBar">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
     </activity>
         <activity
             android:name=".SettingsActivity"
-            android:label="@string/title_activity_settings"></activity>
+            android:label="@string/title_activity_settings"/>
     </application>
 
 </manifest>
