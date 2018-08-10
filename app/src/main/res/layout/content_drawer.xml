@@ -8,4 +8,15 @@
     tools:context="tryhut.wpr.DrawerActivity"
     tools:showIn="@layout/app_bar_drawer">
 
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/settings"
+        app:rippleColor="@color/primary_dark"
+        tools:layout_editor_absoluteX="58dp"
+        tools:layout_editor_absoluteY="352dp" />
+
 </android.support.constraint.ConstraintLayout>

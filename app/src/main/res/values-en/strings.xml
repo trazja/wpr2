@@ -9,4 +9,7 @@
     <string name="services_name">Bike services</string>
     <string name="viewpoints_name">Viewpoints</string>
     <string name="wc_name">Stands<br>Parkings</br><br>WC</br></string>
+    <string name="hint_password">Password</string>
+    <string name="text_login">Login</string>
+    <string name="text_not_member">No account yet? Create one</string>
 </resources>

@@ -1,5 +1,4 @@
 <resources>
-    <string name="app_name">Rowerem po...</string>
     <string name="app_name_city">Wrocławiu!</string>
     <string name="app_name_small">Rowerem po... Wrocławiu!</string>
 
@@ -35,6 +34,27 @@
     <string name="login_incorrect">Błędny login lub hasło</string>
     <string name="passwords_not_equal">Podane hasła nie są identyczne</string>
     <string name="registration_ok">Pomyślnie zarejestrowano</string>
+
+
+    <string name="text_accounts">All Accounts</string>
+    <string name="hint_name">Name</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Hasło</string>
+    <string name="hint_confirm_password">Confirm Password</string>
+    <string name="text_login">Zaloguj się</string>
+    <string name="text_register">Register</string>
+    <string name="error_message_name">Enter Full Name</string>
+    <string name="error_message_email">Enter Valid Email</string>
+    <string name="error_message_age">Enter Age</string>
+    <string name="error_message_password">Enter Password</string>
+    <string name="success_message">Registration Successful</string>
+    <string name="text_not_member">Nie masz jeszcze konta? Zarejestruj się!</string>
+    <string name="text_already_member">Already a member? Login</string>
+    <string name="error_email_exists">Email Already Exists</string>
+    <string name="error_password_match">Password Does Not Matches</string>
+    <string name="error_valid_email_password">Wrong Email or Password</string>
+    <string name="text_hello">Hello,</string>
+    <string name="text_title">Android Tutorials Hub</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -120,4 +140,5 @@
     <string name="pref_ringtone_silent">Silent</string>
 
     <string name="pref_title_vibrate">Vibrate</string>
+    <string name="app_name">Rowerem po...</string>
 </resources>
