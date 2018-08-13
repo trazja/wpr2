@@ -2,7 +2,7 @@
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
 xmlns:card_view="http://schemas.android.com/apk/res-auto"
 xmlns:tools="http://schemas.android.com/tools"
-android:id="@+id/route_cardview"
+android:id="@+id/ti_cardview"
 android:layout_width="match_parent"
 android:layout_height="200dp"
 android:layout_margin="5dp"
@@ -14,8 +14,8 @@ android:background="@color/primary_dark">
     android:layout_height="match_parent"
     android:background="@color/primary_dark">
 
-    <TextView
-        android:id="@+id/route_name"
+       <TextView
+        android:id="@+id/ti_name"
         android:layout_width="237dp"
         android:layout_height="31dp"
         android:layout_marginBottom="8dp"
@@ -31,22 +31,25 @@ android:background="@color/primary_dark">
         android:textColor="@color/accent"/>
 
     <TextView
-        android:id="@+id/route_km"
-        android:layout_width="54dp"
-        android:layout_height="51dp"
+        android:id="@+id/ti_phonenumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginTop="8dp"
+        android:autoLink="phone"
+        android:clickable="true"
+        android:focusable="true"
+        android:textColor="@color/textColor"
         card_view:layout_constraintBottom_toBottomOf="parent"
         card_view:layout_constraintEnd_toStartOf="@+id/route_level"
         card_view:layout_constraintHorizontal_bias="0.423"
         card_view:layout_constraintStart_toEndOf="@+id/route_img"
         card_view:layout_constraintTop_toTopOf="parent"
-        card_view:layout_constraintVertical_bias="0.626"
-        android:textColor="@color/textColor"/>
+        card_view:layout_constraintVertical_bias="0.626" />
 
     <TextView
-        android:id="@+id/route_level"
+        android:id="@+id/ti_openinghours"
         android:layout_width="101dp"
         android:layout_height="32dp"
         android:layout_marginBottom="8dp"
@@ -58,23 +61,33 @@ android:background="@color/primary_dark">
         card_view:layout_constraintTop_toTopOf="parent"
         card_view:layout_constraintVertical_bias="0.552" />
 
-    <ImageView
-        android:id="@+id/route_img"
-        android:layout_width="122dp"
-        android:layout_height="81dp"
+    <TextView
+        android:id="@+id/ti_addressess"
+        android:layout_width="101dp"
+        android:layout_height="32dp"
         android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginEnd="36dp"
         android:layout_marginTop="8dp"
+        android:textColor="@color/textColor"
         card_view:layout_constraintBottom_toBottomOf="parent"
         card_view:layout_constraintEnd_toEndOf="parent"
-        card_view:layout_constraintHorizontal_bias="0.105"
-        card_view:layout_constraintStart_toStartOf="parent"
         card_view:layout_constraintTop_toTopOf="parent"
-        card_view:layout_constraintVertical_bias="0.689"
-        android:textColor="@color/textColor"/>
+        card_view:layout_constraintVertical_bias="0.552" />
+
+
+    <TextView
+        android:id="@+id/ti_emails"
+        android:layout_width="101dp"
+        android:layout_height="32dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/textColor"
+        card_view:layout_constraintBottom_toBottomOf="parent"
+        card_view:layout_constraintEnd_toEndOf="parent"
+        card_view:layout_constraintTop_toTopOf="parent"
+        card_view:layout_constraintVertical_bias="0.552" />
 
 </android.support.constraint.ConstraintLayout>
 
 </android.support.v7.widget.CardView>
-

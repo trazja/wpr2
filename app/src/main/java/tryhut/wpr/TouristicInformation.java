@@ -1,7 +1,7 @@
 package tryhut.wpr;
 
 /**
- * Created by tryhu on 2018-08-10.
+ * Created by tryhu on 2018-08-10.9
  */
 
 public class TouristicInformation {
@@ -34,7 +34,11 @@ public class TouristicInformation {
             new TouristicInformation("Infocentrum na Ostrowie ","+48511087085",
                     "poniedziałek - piątek 10.00 - 19.00\n" +
                             "sobota 10.00 - 17.00\n" +
-                            "niedziela 14.00 - 17.30"+"")
+                            "niedziela 14.00 - 17.30","plac Katedralny 1","info@infocentrum.wroclaw.pl"),
+            new TouristicInformation("Infopunkt Nadodrze ","+48883047310","poniedziałek - piątek 9.00 - 17.00",
+                    "ul. Władysława Łokietka 5/1"," infopunkt@lokietka5.pl"),
+            new TouristicInformation("Centrum Informacji Turystycznej i Rowerowej\n"+" w Dzielnicy Czterech Wyznań","+ 48713461534",
+                    " poniedziałek – niedziela 9.00-20.00","ul. św. Antoniego 8","it@dzielnica4wyznan.info.pl")
 
     };
 
