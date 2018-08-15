@@ -18,7 +18,7 @@ import tryhut.wpr.R;
 
 class CaptionedImagesAdapter extends RecyclerView.Adapter<CaptionedImagesAdapter.ViewHolder> {
 
-    public List<Route> routeList;
+    private Route[] routeList;
 //    private String [] routeNames;
 //    private String [] kms;
 //    private String [] levels;
@@ -30,12 +30,12 @@ class CaptionedImagesAdapter extends RecyclerView.Adapter<CaptionedImagesAdapter
 //        this.levels = levels;
 //        this.imageIds = imageIds;
 //    }
-    public CaptionedImagesAdapter(List<Route> routes) {
-        routeList = routes;
+    public CaptionedImagesAdapter(Route [] routes) {
+        this.routeList = routes;
     }
 
 
-    public  class ViewHolder extends RecyclerView.ViewHolder {
+    public static class ViewHolder extends RecyclerView.ViewHolder {
 
         private TextView routeName;
         private TextView kms;
@@ -65,14 +65,13 @@ class CaptionedImagesAdapter extends RecyclerView.Adapter<CaptionedImagesAdapter
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        Route routes = routeList.get(position);
+        Route route = routeList[position];
         CardView cardView = holder.cardView;
-        holder.routeName.setText(routes.getName());
-        holder.kms.setText(routes.getKm());
-        holder.levels.setText(routes.getLevel());
-        holder.imageIds.setImageResource(routes.getImageResourceId());
-
-
+        holder.routeName.setText(route.getName());
+        holder.kms.setText(route.getKm());
+        holder.levels.setText(route.getLevel());
+        holder.imageIds.setImageResource(route.getImageResourceId());
+      
 //        TextView textView = (TextView) cardView.findViewById(R.id.route_name);
 //        textView.setText(routeNames[position]);
 //
@@ -91,7 +90,7 @@ class CaptionedImagesAdapter extends RecyclerView.Adapter<CaptionedImagesAdapter
 
     @Override
     public int getItemCount() {
-        return routeList.size();
+        return routeList.length;
     }
 
 }

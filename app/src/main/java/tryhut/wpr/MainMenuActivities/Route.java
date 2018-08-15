@@ -1,9 +1,5 @@
 package tryhut.wpr.MainMenuActivities;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-
 import tryhut.wpr.R;
 
 /**
@@ -16,21 +12,20 @@ public class Route {
     private String level;
     private int imageResourceId;
 
-    public Route (String name, String km, String level, int imageResourceId) {
+    private Route (String name, String km, String level, int imageResourceId) {
         this.name = name;
         this.km = km;
         this.level = level;
         this. imageResourceId = imageResourceId;
     }
 
-//    Route [] routes = {
-//
-//            new Route("Grobla Kozanowska", "22.85", "średnia", R.drawable.front1),
-//            new Route("Okolice Dworca Głównego PKP", "22.85", "łatwa", R.drawable.front2),
-//            new Route("Stare Miasto", "22.85", "łatwa", R.drawable.front3),
-//            new Route("Wielka Wyspa i wieża w Kotowicach", "22.85", "trudna", R.drawable.front4), };
+    public static final Route[] routes = {
+            new Route("Grobla Kozanowska", "22.85", "średnia", R.drawable.front1),
+            new Route("Okolice Dworca Głównego PKP", "22.85", "łatwa", R.drawable.front2),
+            new Route("Stare Miasto", "22.85", "łatwa", R.drawable.front3),
+            new Route("Wielka Wyspa i wieża w Kotowicach", "22.85", "trudna", R.drawable.front4),
 
-
+    };
 
     public String getName() {
         return name;
