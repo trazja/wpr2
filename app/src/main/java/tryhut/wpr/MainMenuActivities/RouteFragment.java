@@ -1,6 +1,7 @@
 package tryhut.wpr.MainMenuActivities;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -11,6 +12,7 @@ import android.view.ViewGroup;
 
 
 import tryhut.wpr.R;
+import tryhut.wpr.RouteDetailsActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -54,6 +56,15 @@ public class RouteFragment extends Fragment {
         routeRecycler.setAdapter(adapter);
         LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
         routeRecycler.setLayoutManager(layoutManager);
+
+        adapter.setListener(new CaptionedImagesAdapter.RouteListener() {
+            @Override
+            public void onClick(int position) {
+                Intent intent = new Intent(getActivity(), RouteDetailsActivity.class);
+                intent.putExtra(RouteDetailsActivity.EXTRA_ROUTENO,position);
+                getActivity().startActivity(intent);
+            }
+        });
         return routeRecycler;
     }
 
