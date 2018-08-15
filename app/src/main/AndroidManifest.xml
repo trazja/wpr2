@@ -26,11 +26,7 @@
             android:name=".MainMenuActivities.PlacesMenuActivity"
             android:parentActivityName=".MainActivity" />
         <activity android:name=".SplashScreenActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".PlacesActivity"
@@ -59,7 +55,12 @@
             android:theme="@style/AppTheme.ActionBar" />
         <activity
             android:name=".MainActivity"
-            android:parentActivityName=".SelectNavigationOrGuideActivity" />
+            android:parentActivityName=".SelectNavigationOrGuideActivity" >  <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+
+        <category android:name="android.intent.category.LAUNCHER" ></category>
+    </intent-filter>/>
+        </activity>
         <activity android:name=".SelectNavigationOrGuideActivity" />
         <activity
             android:name=".MainMenuActivities.RouteActivity"
@@ -105,7 +106,10 @@
         <activity
             android:name=".SettingsActivity"
             android:label="@string/title_activity_settings" />
-        <activity android:name=".TouristicInformationActivity"></activity>
+        <activity android:name=".TouristicInformationActivity"
+            android:label="@string/tourist_information"
+            android:parentActivityName=".MainMenuActivities.PlacesMenuActivity"
+            android:theme="@style/AppTheme.ActionBar"></activity>
     </application>
 
 </manifest>

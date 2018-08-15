@@ -142,4 +142,5 @@
     <string name="pref_title_vibrate">Vibrate</string>
     <string name="app_name">Rowerem po...</string>
     <string name="show_on_map">Pokaż na mapie</string>
+    <string name="tourist_information">Informacja turystyczna</string>
 </resources>

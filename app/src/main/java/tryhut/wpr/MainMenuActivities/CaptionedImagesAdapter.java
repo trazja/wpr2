@@ -19,18 +19,8 @@ import tryhut.wpr.R;
 class CaptionedImagesAdapter extends RecyclerView.Adapter<CaptionedImagesAdapter.ViewHolder> {
 
     private Route[] routeList;
-//    private String [] routeNames;
-//    private String [] kms;
-//    private String [] levels;
-//    private int [] imageIds;
 
-    //    public CaptionedImagesAdapter(String[] routeNames, String[] kms, String[] levels, int[] imageIds) {
-//        this.routeNames = routeNames;
-//        this.kms = kms;
-//        this.levels = levels;
-//        this.imageIds = imageIds;
-//    }
-    public CaptionedImagesAdapter(Route [] routes) {
+    public CaptionedImagesAdapter(Route[] routes) {
         this.routeList = routes;
     }
 
@@ -71,20 +61,7 @@ class CaptionedImagesAdapter extends RecyclerView.Adapter<CaptionedImagesAdapter
         holder.kms.setText(route.getKm());
         holder.levels.setText(route.getLevel());
         holder.imageIds.setImageResource(route.getImageResourceId());
-      
-//        TextView textView = (TextView) cardView.findViewById(R.id.route_name);
-//        textView.setText(routeNames[position]);
-//
-//        TextView textView2 = (TextView) cardView.findViewById(R.id.route_km);
-//        textView2.setText(kms[position]);
-//
-//
-//        TextView textView3 = (TextView) cardView.findViewById(R.id.route_level);
-//        textView3.setText(levels[position]);
-//
-//        ImageView imageView = (ImageView) cardView.findViewById(R.id.route_img);
-//        Drawable drawable = cardView.getResources().getDrawable(imageIds[position], null);
-//        imageView.setImageDrawable(drawable);
+
 
     }
 

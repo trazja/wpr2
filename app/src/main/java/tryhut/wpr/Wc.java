@@ -22,5 +22,8 @@ public class Wc {
         return wcOpeningHours;
     }
 
-
+    public static final Wc[] wcs = {
+            new Wc("ul.Wita Stwosza", "czynny od 10:00 do 18:00"),
+            new Wc("plac Solny", "czynny od 10:00 do 18:00"),
+    };
 }
