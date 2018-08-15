@@ -8,6 +8,9 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import java.util.List;
+
 import tryhut.wpr.R;
 
 /**
@@ -48,7 +51,7 @@ public class RouteFragment extends Fragment {
         }
 
         CaptionedImagesAdapter adapter =
-                new CaptionedImagesAdapter(routeNames, routeKms, routeLevel, routeImgs);
+                new CaptionedImagesAdapter(routeNames,routeKms,routeLevel,routeImgs);
         routeRecycler.setAdapter(adapter);
         LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
         routeRecycler.setLayoutManager(layoutManager);
