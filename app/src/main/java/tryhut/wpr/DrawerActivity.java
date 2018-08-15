@@ -17,7 +17,6 @@ import android.view.MenuItem;
 import tryhut.wpr.MainMenuActivities.MapsActivity;
 import tryhut.wpr.MainMenuActivities.RouteActivity;
 import tryhut.wpr.MainMenuActivities.WarningsActivity;
-import tryhut.wpr.PlacesMenuActivities.PlacesActivity;
 
 public class DrawerActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {

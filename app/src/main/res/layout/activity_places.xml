@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:theme="@style/AppTheme.ActionBar"
-    tools:context="tryhut.wpr.PlacesMenuActivities.PlacesActivity">
+    tools:context="tryhut.wpr.PlacesActivity">
 
     <RelativeLayout
         android:id="@+id/placesLayout"

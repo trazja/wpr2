@@ -1,4 +1,4 @@
-package tryhut.wpr.PlacesMenuActivities;
+package tryhut.wpr;
 
 import android.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;

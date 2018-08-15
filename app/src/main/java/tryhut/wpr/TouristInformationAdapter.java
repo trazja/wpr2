@@ -54,11 +54,11 @@ public class TouristInformationAdapter extends RecyclerView.Adapter<TouristInfor
     public void onBindViewHolder(TouristInformationAdapter.ViewHolder holder, final int position) {
 
         CardView cardView = holder.cardView;
-        TextView textView = (TextView) cardView.findViewById(R.id.ti_name);
-        textView.setText(names[position]);
+        TextView ti_name = (TextView) cardView.findViewById(R.id.ti_name);
+        ti_name.setText(names[position]);
 
-        TextView textView2 = (TextView) cardView.findViewById(R.id.ti_phonenumber);
-        textView2.setText(phoneNumbers[position]);
+        TextView phonenumber = (TextView) cardView.findViewById(R.id.ti_phonenumber);
+        phonenumber.setText(phoneNumbers[position]);
 //
 //        textView2.setOnClickListener(new View.OnClickListener() {
 //
@@ -68,14 +68,14 @@ public class TouristInformationAdapter extends RecyclerView.Adapter<TouristInfor
 //            }
 //        });
 
-        TextView textView3 = (TextView) cardView.findViewById(R.id.ti_openinghours);
-        textView3.setText(openingHours[position]);
+        TextView openinghour = (TextView) cardView.findViewById(R.id.ti_openinghours);
+        openinghour.setText(openingHours[position]);
 
-        TextView textView4 = (TextView) cardView.findViewById(R.id.ti_addressess);
-        textView4.setText(addresses[position]);
+        TextView address = (TextView) cardView.findViewById(R.id.ti_addressess);
+        address.setText(addresses[position]);
 
-        TextView textView5 = (TextView) cardView.findViewById(R.id.ti_emails);
-        textView5.setText(emails[position]);
+        TextView email = (TextView) cardView.findViewById(R.id.ti_emails);
+        email.setText(emails[position]);
 
 
     }

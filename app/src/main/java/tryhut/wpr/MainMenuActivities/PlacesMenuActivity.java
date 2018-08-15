@@ -6,13 +6,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-import tryhut.wpr.PlacesMenuActivities.FoodtruckActivity;
-import tryhut.wpr.PlacesMenuActivities.PlacesActivity;
-import tryhut.wpr.PlacesMenuActivities.ServicesActivity;
-import tryhut.wpr.PlacesMenuActivities.ViewpointsActivity;
-import tryhut.wpr.PlacesMenuActivities.WcActivity;
+import tryhut.wpr.FoodtruckActivity;
+import tryhut.wpr.PlacesActivity;
+import tryhut.wpr.ServicesActivity;
+import tryhut.wpr.ViewpointsActivity;
+import tryhut.wpr.WcActivity;
 import tryhut.wpr.R;
-import tryhut.wpr.TouristicInformation;
 import tryhut.wpr.TouristicInformationActivity;
 
 

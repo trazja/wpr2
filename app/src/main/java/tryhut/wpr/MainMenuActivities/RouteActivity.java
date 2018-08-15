@@ -24,8 +24,7 @@ public class RouteActivity extends AppCompatActivity {
         transaction.add(R.id.route_fragment, fragment);
         transaction.commit();
 
-        SearchView routeSearchView = (SearchView) findViewById(R.id.routeSearchView);
-        routeSearchView.setQueryHint("Szukaj");
+
 
 
     }
