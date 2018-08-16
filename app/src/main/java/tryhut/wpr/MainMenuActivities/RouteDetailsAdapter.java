@@ -76,22 +76,22 @@ public class RouteDetailsAdapter extends RecyclerView.Adapter<RouteDetailsAdapte
 
 
         Glide.with(ctx)
-                .load(routeDetails[position].getPhoto1ResourceId()).
-                apply(new RequestOptions()
+                .load(routeDetails[position].getPhoto1ResourceId()).thumbnail(0.1f)
+                .apply(new RequestOptions()
                         .placeholder(R.drawable.placeholder1)
                         .centerCrop()).into(holder.photo1);
         Glide.with(ctx)
-                .load(routeDetails[position].getPhoto2ResourceId()).
+                .load(routeDetails[position].getPhoto2ResourceId()).thumbnail(0.1f).
                 apply(new RequestOptions()
                         .placeholder(R.drawable.placeholder2)
                         .centerCrop()).into(holder.photo2);
         Glide.with(ctx)
-                .load(routeDetails[position].getPhoto3ResourceId()).
+                .load(routeDetails[position].getPhoto3ResourceId()).thumbnail(0.1f).
                 apply(new RequestOptions()
                         .placeholder(R.drawable.placeholder3)
                         .centerCrop()).into(holder.photo3);
         Glide.with(ctx)
-                .load(routeDetails[position].getPhoto4ResourceId()).
+                .load(routeDetails[position].getPhoto4ResourceId()).thumbnail(0.1f).
                 apply(new RequestOptions()
                         .placeholder(R.drawable.placeholder4)
                         .centerCrop()).into(holder.photo4);
