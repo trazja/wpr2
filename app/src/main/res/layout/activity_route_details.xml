@@ -9,39 +9,64 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="150dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:id="@+id/relativeLayout">
 
         <TextView
             android:id="@+id/routedetalisname"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:text="sdfsdfdf" />
 
         <TextView
             android:id="@+id/routedetailskm"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/routedetailslevel"
+            android:layout_alignBottom="@+id/routedetailslevel"
+            android:layout_marginEnd="19dp"
+            android:layout_toStartOf="@+id/routedetailshowonmapbutton"
+            android:text="fsdfdsf" />
 
         <TextView
             android:id="@+id/routedetailslevel"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="21dp"
+            android:layout_toEndOf="@+id/routedetailshowonmapbutton"
+            android:text="sfdsfds" />
 
         <Button
             android:id="@+id/routedetailshowonmapbutton"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="11dp" />
     </RelativeLayout>
+
 
     <FrameLayout
         android:id="@+id/routedetails_fragment"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="149dp">
         <fragment
             class="tryhut.wpr.MainMenuActivities.RouteDetailsFragment"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent"
+           />
+
     </FrameLayout>
+
 
 
 </RelativeLayout>

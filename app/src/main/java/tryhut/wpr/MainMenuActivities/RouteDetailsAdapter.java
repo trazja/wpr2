@@ -9,8 +9,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.annotation.GlideModule;
 import com.bumptech.glide.request.RequestOptions;
 
+import javax.microedition.khronos.opengles.GL;
+
+import tryhut.wpr.MyGlideApp;
 import tryhut.wpr.R;
 
 /**
@@ -33,6 +37,7 @@ public class RouteDetailsAdapter extends RecyclerView.Adapter<RouteDetailsAdapte
         private ImageView photo1;
         private ImageView photo2;
         private ImageView photo3;
+        private ImageView photo4;
 
         private CardView cardView;
 
@@ -43,6 +48,7 @@ public class RouteDetailsAdapter extends RecyclerView.Adapter<RouteDetailsAdapte
             photo1 = (ImageView) cardView.findViewById(R.id.photo1);
             photo2 = (ImageView) cardView.findViewById(R.id.photo2);
             photo3 = (ImageView) cardView.findViewById(R.id.photo3);
+            photo4 = (ImageView) cardView.findViewById(R.id.photo4);
 
             description = (TextView) cardView.findViewById(R.id.description);
         }
@@ -58,13 +64,16 @@ public class RouteDetailsAdapter extends RecyclerView.Adapter<RouteDetailsAdapte
     }
 
     @Override
+
     public void onBindViewHolder(RouteDetailsAdapter.ViewHolder holder, final int position) {
         RouteDetails routedet = routeDetails[position];
         CardView cardView = holder.cardView;
         holder.photo1.setImageResource(routedet.getPhoto1ResourceId());
         holder.photo2.setImageResource(routedet.getPhoto2ResourceId());
         holder.photo3.setImageResource(routedet.getPhoto3ResourceId());
+        holder.photo4.setImageResource(routedet.getPhoto4ResourceId());
         holder.description.setText(routedet.getRouteDetailsDescription());
+
 
         Glide.with(ctx)
                 .load(routeDetails[position].getPhoto1ResourceId()).
@@ -81,6 +90,12 @@ public class RouteDetailsAdapter extends RecyclerView.Adapter<RouteDetailsAdapte
                 apply(new RequestOptions()
                         .placeholder(R.drawable.placeholder3)
                         .centerCrop()).into(holder.photo3);
+        Glide.with(ctx)
+                .load(routeDetails[position].getPhoto4ResourceId()).
+                apply(new RequestOptions()
+                        .placeholder(R.drawable.placeholder4)
+                        .centerCrop()).into(holder.photo4);
+
     }
 
 
