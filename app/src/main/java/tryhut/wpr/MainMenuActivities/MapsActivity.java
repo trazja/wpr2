@@ -54,11 +54,33 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private static final LatLng ITPkp = new LatLng(51.098649, 17.036418);
 
     //Foodtrucki
+    private static final LatLng PizzaMobile = new LatLng(51.130597, 16.964362);
+    private static final LatLng Nienazarty = new LatLng(51.112271, 17.007158);
+    private static final LatLng HappyLittleTruck = new LatLng(51.107388, 17.030037);
+    private static final LatLng Pasibus = new LatLng(51.100033, 17.027582);
+    private static final LatLng GreenBus = new LatLng(51.116764, 17.033111);
     //Wc
+    private static final LatLng toaletaWyspaSlodowa = new LatLng(51.116396, 17.039025);
+    private static final LatLng toaletaPrzyBulwarze = new LatLng(51.111577, 17.044511);
+    private static final LatLng toaletaNaDworcu = new LatLng(51.098994, 17.036643);
+    private static final LatLng toaletaNaPlacuStaszica = new LatLng(51.122512, 17.030657);
+    private static final LatLng toaletaNaPlacuSolnym = new LatLng(51.109648, 17.029424);
     //Stojaki
-    //Parkingi
+
     //Punkty widokowe
 
+    private static final LatLng kosciolGarnizonowy = new LatLng(51.111447, 17.030046);
+    private static final LatLng mostekPokutnic = new LatLng(51.109609, 17.034670);
+    private static final LatLng wiezaKatedry = new LatLng(51.114088, 17.047299);
+    private static final LatLng SkyTower = new LatLng(51.094495, 17.019629);
+    private static final LatLng wzgorzeGajowickie = new LatLng(51.093611, 16.996667);
+    //Stacje naprawy rowerów
+
+    private static final LatLng samoobslugowaStrzegomska = new LatLng(51.113184, 16.995230);
+    private static final LatLng samoobslugowaPromenadaStaromiejska = new LatLng(51.107948, 17.040842);
+    private static final LatLng samoobslugowaWyszynskiego = new LatLng(51.113510, 17.050759);
+    private static final LatLng serwisRowerowyJSR = new LatLng(51.127655, 16.972635);
+    private static final LatLng portRowerowySklepISerwis = new LatLng(51.129563, 17.017542);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -123,15 +145,124 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .title("Informacja Turystyczna KRASNAL INFO")
                 .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE)));
 
-        Marker mITZoo  = mMap.addMarker(new MarkerOptions()
+        Marker mITZoo = mMap.addMarker(new MarkerOptions()
                 .position(ITZoo)
                 .title("Informacja Turystyczna ZOO")
                 .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE)));
 
-        Marker mITPkp  = mMap.addMarker(new MarkerOptions()
+        Marker mITPkp = mMap.addMarker(new MarkerOptions()
                 .position(ITPkp)
                 .title("Informacja Turystyczna Dworzec Główny PKP")
                 .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE)));
+
+        //Foodtrucki
+
+        Marker mPizzaMobile = mMap.addMarker(new MarkerOptions()
+                .position(PizzaMobile)
+                .title("PizzaMobile")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
+
+        Marker mNienazarty = mMap.addMarker(new MarkerOptions()
+                .position(Nienazarty)
+                .title("NieNaŻarty FoodTruck")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
+
+        Marker mHappyLittleTruck = mMap.addMarker(new MarkerOptions()
+                .position(HappyLittleTruck)
+                .title("Happy Little Truck")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
+
+        Marker mPasibus = mMap.addMarker(new MarkerOptions()
+                .position(Pasibus)
+                .title("Pasibus")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
+
+        Marker mGreenBus = mMap.addMarker(new MarkerOptions()
+                .position(GreenBus)
+                .title("GreenBus")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
+
+        //WC
+
+        Marker mtoaletaWyspaSlodowa = mMap.addMarker(new MarkerOptions()
+                .position(toaletaWyspaSlodowa)
+                .title("Toaleta publiczna na Wyspie Słodowej")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
+
+        Marker mtoaletaPrzyBulwarze = mMap.addMarker(new MarkerOptions()
+                .position(toaletaPrzyBulwarze)
+                .title("Toaleta przy Bulwarze")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
+
+        Marker mtoaletaNaDworcu = mMap.addMarker(new MarkerOptions()
+                .position(toaletaNaDworcu)
+                .title("Toaleta na Dworcu Głównym PKP")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
+
+        Marker mtoaletaNaPlacuStaszica = mMap.addMarker(new MarkerOptions()
+                .position(toaletaNaPlacuStaszica)
+                .title("Toaleta na Placu Staszica")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
+
+        Marker mtoaletaNaPlacuSolnym = mMap.addMarker(new MarkerOptions()
+                .position(toaletaNaPlacuSolnym )
+                .title("Toaleta na Placu Solnym")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
+
+        //punkty widokowe
+
+        Marker mkosciolGarnizonowy = mMap.addMarker(new MarkerOptions()
+                .position(kosciolGarnizonowy)
+                .title("Wieża Kościoła Garnizonowego p.w. św. Elżbiety")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
+
+        Marker mmostekPokutnic = mMap.addMarker(new MarkerOptions()
+                .position(mostekPokutnic)
+                .title("Mostek Pokutnic w Katedrze św. Marii Magdaleny.")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
+
+        Marker mwiezaKatedry = mMap.addMarker(new MarkerOptions()
+                .position(wiezaKatedry)
+                .title("Wieża Katedry św Jana Chrzciciela")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
+
+        Marker mSkyTower = mMap.addMarker(new MarkerOptions()
+                .position(SkyTower)
+                .title("SkyTower")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
+
+        Marker mwzgorzeGajowickie = mMap.addMarker(new MarkerOptions()
+                .position(wzgorzeGajowickie )
+                .title("Wzgórze Gajowickie")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
+
+        //serwisy i stacje samoobsługowe
+
+        Marker msamoobslugowaStrzegomska  = mMap.addMarker(new MarkerOptions()
+                .position(samoobslugowaStrzegomska )
+                .title("Stacja samoobsługowa przy Strzegomskiej")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW)));
+
+        Marker msamoobslugowaPromenadaStaromiejska  = mMap.addMarker(new MarkerOptions()
+                .position(samoobslugowaPromenadaStaromiejska )
+                .title("Stacja samoobsługowa przy Promenadzie Staromiejskiej")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW)));
+
+        Marker msamoobslugowaWyszynskiego  = mMap.addMarker(new MarkerOptions()
+                .position(samoobslugowaWyszynskiego )
+                .title("Stacja samoobsługowa przy ulicy Wyszyńskiego")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW)));
+
+        Marker mserwisRowerowyJSR  = mMap.addMarker(new MarkerOptions()
+                .position(serwisRowerowyJSR )
+                .title("Serwis Rowerowy JSR")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW)));
+
+        Marker mportRowerowySklepISerwis  = mMap.addMarker(new MarkerOptions()
+                .position(portRowerowySklepISerwis  )
+                .title("Port Rowerowy - sklep i serwis")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW)));
+
 
         //parsowanie tras
         Gpx parsedGpx = null;
@@ -357,13 +488,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             Intent intent = new Intent(MapsActivity.this, RouteDetails.class);
         }
     }
-
-
-
-
-
-
-
 
 
 }
