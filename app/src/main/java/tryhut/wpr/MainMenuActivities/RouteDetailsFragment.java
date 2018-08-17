@@ -46,10 +46,10 @@ public class RouteDetailsFragment extends Fragment {
         for (int i = 0; i < photos3.length; i++) {
             photos3[i] = RouteDetails.routeDetails[i].getPhoto3ResourceId();
         }
-        int[] photos4 = new int[RouteDetails.routeDetails.length];
-        for (int i = 0; i < photos4.length; i++) {
-            photos4[i] = RouteDetails.routeDetails[i].getPhoto4ResourceId();
-        }
+//        int[] photos4 = new int[RouteDetails.routeDetails.length];
+//        for (int i = 0; i < photos4.length; i++) {
+//            photos4[i] = RouteDetails.routeDetails[i].getPhoto4ResourceId();
+//        }
         RouteDetailsAdapter adapter =
                 new RouteDetailsAdapter(RouteDetails.routeDetails, getContext());
         routeDetailsRecycler.setAdapter(adapter);

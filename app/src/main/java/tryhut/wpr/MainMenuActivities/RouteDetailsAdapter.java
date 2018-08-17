@@ -10,9 +10,8 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.annotation.GlideModule;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.RequestOptions;
-
-import javax.microedition.khronos.opengles.GL;
 
 import tryhut.wpr.MyGlideApp;
 import tryhut.wpr.R;
@@ -37,7 +36,7 @@ public class RouteDetailsAdapter extends RecyclerView.Adapter<RouteDetailsAdapte
         private ImageView photo1;
         private ImageView photo2;
         private ImageView photo3;
-        private ImageView photo4;
+      //  private ImageView photo4;
 
         private CardView cardView;
 
@@ -48,7 +47,7 @@ public class RouteDetailsAdapter extends RecyclerView.Adapter<RouteDetailsAdapte
             photo1 = (ImageView) cardView.findViewById(R.id.photo1);
             photo2 = (ImageView) cardView.findViewById(R.id.photo2);
             photo3 = (ImageView) cardView.findViewById(R.id.photo3);
-            photo4 = (ImageView) cardView.findViewById(R.id.photo4);
+           // photo4 = (ImageView) cardView.findViewById(R.id.photo4);
 
             description = (TextView) cardView.findViewById(R.id.description);
         }
@@ -71,30 +70,22 @@ public class RouteDetailsAdapter extends RecyclerView.Adapter<RouteDetailsAdapte
         holder.photo1.setImageResource(routedet.getPhoto1ResourceId());
         holder.photo2.setImageResource(routedet.getPhoto2ResourceId());
         holder.photo3.setImageResource(routedet.getPhoto3ResourceId());
-        holder.photo4.setImageResource(routedet.getPhoto4ResourceId());
+    //    holder.photo4.setImageResource(routedet.getPhoto4ResourceId());
         holder.description.setText(routedet.getRouteDetailsDescription());
 
 
         Glide.with(ctx)
-                .load(routeDetails[position].getPhoto1ResourceId()).thumbnail(0.1f)
-                .apply(new RequestOptions()
-                        .placeholder(R.drawable.placeholder1)
-                        .centerCrop()).into(holder.photo1);
+                .load(routeDetails[position].getPhoto1ResourceId())
+                .apply(new RequestOptions().skipMemoryCache(true).diskCacheStrategy(DiskCacheStrategy.NONE).centerCrop()).into(holder.photo1);
         Glide.with(ctx)
-                .load(routeDetails[position].getPhoto2ResourceId()).thumbnail(0.1f).
-                apply(new RequestOptions()
-                        .placeholder(R.drawable.placeholder2)
-                        .centerCrop()).into(holder.photo2);
+                .load(routeDetails[position].getPhoto2ResourceId())
+                .apply(new RequestOptions().skipMemoryCache(true).diskCacheStrategy(DiskCacheStrategy.NONE).centerCrop()).into(holder.photo2);
         Glide.with(ctx)
-                .load(routeDetails[position].getPhoto3ResourceId()).thumbnail(0.1f).
-                apply(new RequestOptions()
-                        .placeholder(R.drawable.placeholder3)
-                        .centerCrop()).into(holder.photo3);
-        Glide.with(ctx)
-                .load(routeDetails[position].getPhoto4ResourceId()).thumbnail(0.1f).
-                apply(new RequestOptions()
-                        .placeholder(R.drawable.placeholder4)
-                        .centerCrop()).into(holder.photo4);
+                .load(routeDetails[position].getPhoto3ResourceId())
+                .apply(new RequestOptions().skipMemoryCache(true).diskCacheStrategy(DiskCacheStrategy.NONE).centerCrop()).into(holder.photo3);
+//        Glide.with(ctx)
+//                .load(routeDetails[position].getPhoto4ResourceId())
+//                .apply(new RequestOptions().skipMemoryCache(true).diskCacheStrategy(DiskCacheStrategy.NONE).centerCrop()).into(holder.photo4);
 
     }
 
