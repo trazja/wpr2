@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="tryhut.wpr.MainActivity"
-    android:background="@color/primary_light">
+    android:background="@color/primary_dark"
+    tools:context="tryhut.wpr.MainActivity">
 
     <android.support.constraint.Guideline
         android:id="@+id/vertical_guideline2"
@@ -25,7 +25,7 @@
         android:id="@+id/routeButton"
         android:layout_width="150dp"
         android:layout_height="140dp"
-        android:background="@drawable/button_selector"
+        android:background="@drawable/button_drawable"
         android:text="@string/route"
         android:textColor="@color/divider"
         app:layout_constraintBottom_toTopOf="@+id/horizontal_guideline4"

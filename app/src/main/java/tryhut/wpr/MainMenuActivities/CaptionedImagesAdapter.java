@@ -14,6 +14,10 @@ import android.widget.TextView;
 import android.widget.ImageView;
 import android.graphics.drawable.Drawable;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.request.RequestOptions;
+
 import java.util.List;
 
 import tryhut.wpr.R;
@@ -29,7 +33,7 @@ class CaptionedImagesAdapter extends RecyclerView.Adapter<CaptionedImagesAdapter
     Context mContext;
     private RouteListener listener;
 
-    public static interface RouteListener{
+    public static interface RouteListener {
         public void onClick(int position);
     }
 
@@ -39,9 +43,10 @@ class CaptionedImagesAdapter extends RecyclerView.Adapter<CaptionedImagesAdapter
         this.routeList = routes;
 
     }
-public void setListener (RouteListener listener){
-        this.listener=listener;
-}
+
+    public void setListener(RouteListener listener) {
+        this.listener = listener;
+    }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
@@ -52,7 +57,7 @@ public void setListener (RouteListener listener){
 
         private CardView cardView;
 
-    public  ViewHolder(CardView v) {
+        public ViewHolder(CardView v) {
             super(v);
             cardView = v;
 
@@ -74,6 +79,7 @@ public void setListener (RouteListener listener){
 
     @Override
     public void onBindViewHolder(ViewHolder holder, final int position) {
+        holder.getAdapterPosition();
         Route route = routeList[position];
         CardView cardView = holder.cardView;
         holder.routeName.setText(route.getName());
@@ -81,14 +87,22 @@ public void setListener (RouteListener listener){
         holder.levels.setText(route.getLevel());
         holder.imageIds.setImageResource(route.getImageResourceId());
 
+
+
+
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (listener !=null){
+                if (listener != null) {
                     listener.onClick(position);
                 }
             }
         });
+//
+//        Glide.with(mContext)
+//                .load(routeList[position].getImageResourceId())
+//                .apply(new RequestOptions().skipMemoryCache(true).diskCacheStrategy(DiskCacheStrategy.NONE).centerCrop())
+//                .into(holder.imageIds);
 
     }
 
