@@ -143,4 +143,6 @@
     <string name="app_name">Rowerem po...</string>
     <string name="show_on_map">Pokaż na mapie</string>
     <string name="tourist_information">Informacja turystyczna</string>
+    <string name="address">Adres</string>
+    <string name="openinghours">Otwarte:</string>
 </resources>
