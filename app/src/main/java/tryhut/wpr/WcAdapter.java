@@ -8,7 +8,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 
-
 /**
  * Created by tryhu on 2018-08-15.
  */
@@ -23,7 +22,7 @@ public class WcAdapter extends RecyclerView.Adapter<WcAdapter.ViewHolder> {
 
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-
+        private TextView wcName;
         private TextView wcAddress;
         private TextView wcOpeningHours;
 
@@ -33,6 +32,7 @@ public class WcAdapter extends RecyclerView.Adapter<WcAdapter.ViewHolder> {
         ViewHolder(CardView v) {
             super(v);
             cardView = v;
+            wcName = (TextView) cardView.findViewById(R.id.wc_name);
             wcAddress = (TextView) cardView.findViewById(R.id.wc_address);
             wcOpeningHours = (TextView) cardView.findViewById(R.id.wc_openinghours);
 
@@ -52,6 +52,7 @@ public class WcAdapter extends RecyclerView.Adapter<WcAdapter.ViewHolder> {
     public void onBindViewHolder(WcAdapter.ViewHolder holder, int position) {
         Wc wc = wcList[position];
         CardView cardView = holder.cardView;
+        holder.wcName.setText(wc.getWcName());
         holder.wcAddress.setText(wc.getWcAddress());
         holder.wcOpeningHours.setText(wc.getWcOpeningHours());
 

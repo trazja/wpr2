@@ -25,6 +25,11 @@ public class WcFragment extends Fragment {
         RecyclerView wcRecycler = (RecyclerView) inflater.inflate(
                 R.layout.fragment_wc, container, false);
 
+        String[] wcName = new String[Wc.wcs.length];
+        for (int i = 0; i < wcName.length; i++) {
+            wcName[i] = Wc.wcs[i].getWcName();
+        }
+
         String[] wcAddresses = new String[Wc.wcs.length];
         for (int i = 0; i < wcAddresses.length; i++) {
             wcAddresses[i] = Wc.wcs[i].getWcAddress();
