@@ -32,7 +32,10 @@ public class RouteDetailsActivity extends AppCompatActivity {
         TextView rlevel =(TextView)findViewById(R.id.routedetailslevel);
         rlevel.setText(routeLevel);
 
+        Bundle bundle = new Bundle();
+        bundle.putString(EXTRA_ROUTENO,"routeNo");
         RouteDetailsFragment fragment = new RouteDetailsFragment();
+        fragment.setArguments(bundle);
         FragmentTransaction transaction = getFragmentManager().beginTransaction();
         transaction.add(R.id.routedetails_fragment,fragment);
         transaction.commit();

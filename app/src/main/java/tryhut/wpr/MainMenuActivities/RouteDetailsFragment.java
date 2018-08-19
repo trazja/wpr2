@@ -26,6 +26,7 @@ public class RouteDetailsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+//        String strtxt = getArguments().getString("routeNo");
         RecyclerView routeDetailsRecycler = (RecyclerView) inflater.inflate(
                 R.layout.fragment_route_details, container, false);
 
