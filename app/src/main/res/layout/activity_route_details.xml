@@ -59,11 +59,11 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="149dp">
+
         <fragment
             class="tryhut.wpr.MainMenuActivities.RouteDetailsFragment"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-           />
+            android:layout_height="wrap_content" />
 
     </FrameLayout>
 

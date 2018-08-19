@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="tryhut.wpr.MainMenuActivities.RouteActivity"
-    android:id="@+id/activity_route">
+    android:id="@+id/activity_route"
+    android:background="@color/secondaryColor">
 
        <ScrollView
         android:id="@+id/scrollView2"

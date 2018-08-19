@@ -74,13 +74,13 @@ public class RouteDetailsAdapter extends RecyclerView.Adapter<RouteDetailsAdapte
         holder.description.setText(routedet.getRouteDetailsDescription());
 
 
-        Glide.with(ctx)
+        Glide.with(cardView.getContext())
                 .load(routeDetails[position].getPhoto1ResourceId())
                 .apply(new RequestOptions().skipMemoryCache(true).diskCacheStrategy(DiskCacheStrategy.NONE).centerCrop()).into(holder.photo1);
-        Glide.with(ctx)
+        Glide.with(cardView.getContext())
                 .load(routeDetails[position].getPhoto2ResourceId())
                 .apply(new RequestOptions().skipMemoryCache(true).diskCacheStrategy(DiskCacheStrategy.NONE).centerCrop()).into(holder.photo2);
-        Glide.with(ctx)
+        Glide.with(cardView.getContext())
                 .load(routeDetails[position].getPhoto3ResourceId())
                 .apply(new RequestOptions().skipMemoryCache(true).diskCacheStrategy(DiskCacheStrategy.NONE).centerCrop()).into(holder.photo3);
 //        Glide.with(ctx)

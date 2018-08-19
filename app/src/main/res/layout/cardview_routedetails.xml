@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/routedetails_cardview"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="550dp">
 
     <RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
@@ -16,30 +16,24 @@
             android:layout_height="170dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="19dp" />
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="23dp" />
 
         <ImageView
             android:id="@+id/photo2"
             android:layout_width="170dp"
             android:layout_height="170dp"
 
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginEnd="11dp" />
+            android:layout_alignTop="@+id/photo1"
+            android:layout_marginStart="11dp"
+            android:layout_toEndOf="@+id/photo1" />
 
         <ImageView
             android:id="@+id/photo3"
-            android:layout_width="170dp"
+            android:layout_width="300dp"
             android:layout_height="170dp"
-            android:layout_alignStart="@+id/photo2"
-            android:layout_alignTop="@+id/photo4" />
-
-        <ImageView
-            android:id="@+id/photo4"
-            android:layout_width="170dp"
-            android:layout_height="170dp"
-            android:layout_alignStart="@+id/photo1"
             android:layout_below="@+id/photo1"
+            android:layout_centerHorizontal="true"
             android:layout_marginTop="18dp" />
 
         <TextView
@@ -48,7 +42,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_below="@+id/photo3"
-            android:layout_marginTop="42dp"
+            android:layout_marginTop="64dp"
             android:text="jijaijdisjdiajsidjiaosjdoooooooooooooooooooooooooooooooooooooo" />
 
 

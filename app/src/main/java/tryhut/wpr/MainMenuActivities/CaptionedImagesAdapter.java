@@ -78,10 +78,10 @@ class CaptionedImagesAdapter extends RecyclerView.Adapter<CaptionedImagesAdapter
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, final int position) {
+    public void onBindViewHolder(final ViewHolder holder, final int position) {
         holder.getAdapterPosition();
         Route route = routeList[position];
-        CardView cardView = holder.cardView;
+  final  CardView cardView = holder.cardView;
         holder.routeName.setText(route.getName());
         holder.kms.setText(route.getKm());
         holder.levels.setText(route.getLevel());
@@ -96,14 +96,16 @@ class CaptionedImagesAdapter extends RecyclerView.Adapter<CaptionedImagesAdapter
                 if (listener != null) {
                     listener.onClick(position);
                 }
+
+
+
             }
         });
-//
-//        Glide.with(mContext)
-//                .load(routeList[position].getImageResourceId())
-//                .apply(new RequestOptions().skipMemoryCache(true).diskCacheStrategy(DiskCacheStrategy.NONE).centerCrop())
-//                .into(holder.imageIds);
 
+        Glide.with(cardView.getContext())
+                .load(routeList[position].getImageResourceId())
+                .apply(new RequestOptions().skipMemoryCache(true).diskCacheStrategy(DiskCacheStrategy.NONE).centerCrop())
+                .into(holder.imageIds);
     }
 
     @Override
