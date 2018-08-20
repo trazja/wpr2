@@ -15,7 +15,6 @@ import tryhut.wpr.MainMenuActivities.RouteDetails;
 
 public class RouteDetailsActivity extends AppCompatActivity {
 
-    Context context;
     public static final String EXTRA_ROUTENO = "routeNo";
 
     @Override
@@ -51,17 +50,17 @@ public class RouteDetailsActivity extends AppCompatActivity {
 
         String routeDescription = RouteDetails.routeDetails[routeNo].getRouteDetailsDescription();
         TextView rDescription = (TextView)findViewById(R.id.description);
-        rkm.setText(routeKm);
+        rDescription.setText(routeDescription);
 
-        //Glide.with(context)
-//            .load(photo1ResourceId)
-//                .apply(new RequestOptions().skipMemoryCache(true).diskCacheStrategy(DiskCacheStrategy.NONE).centerCrop()).into(photo1Id);
-//        Glide.with(context)
-//            .load(photo2ResourceId)
-//                .apply(new RequestOptions().skipMemoryCache(true).diskCacheStrategy(DiskCacheStrategy.NONE).centerCrop()).into(photo2Id);
-//        Glide.with(context)
-//            .load(photo3ResourceId)
-//                .apply(new RequestOptions().skipMemoryCache(true).diskCacheStrategy(DiskCacheStrategy.NONE).centerCrop()).into(photo3Id);
+        Glide.with(this)
+            .load(photo1ResourceId)
+                .apply(new RequestOptions().skipMemoryCache(true).diskCacheStrategy(DiskCacheStrategy.NONE).centerCrop()).into(photo1Id);
+        Glide.with(this)
+            .load(photo2ResourceId)
+                .apply(new RequestOptions().skipMemoryCache(true).diskCacheStrategy(DiskCacheStrategy.NONE).centerCrop()).into(photo2Id);
+        Glide.with(this)
+            .load(photo3ResourceId)
+                .apply(new RequestOptions().skipMemoryCache(true).diskCacheStrategy(DiskCacheStrategy.NONE).centerCrop()).into(photo3Id);
     }
 
 //
