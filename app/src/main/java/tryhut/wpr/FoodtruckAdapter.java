@@ -20,12 +20,12 @@ import com.bumptech.glide.request.RequestOptions;
 public class FoodtruckAdapter extends RecyclerView.Adapter<FoodtruckAdapter.ViewHolder> {
 
     private Foodtrucks[] foodtrucks;
-Context ctx;
+    Context ctx;
 
-    public FoodtruckAdapter(Foodtrucks[] foodtruckList,Context ctx) {
+    public FoodtruckAdapter(Foodtrucks[] foodtruckList, Context ctx) {
 
         this.foodtrucks = foodtruckList;
-        this.ctx=ctx;
+        this.ctx = ctx;
 
     }
 
@@ -40,7 +40,7 @@ Context ctx;
 
         private CardView cardView;
 
-        public  ViewHolder(CardView v) {
+        public ViewHolder(CardView v) {
             super(v);
             cardView = v;
 

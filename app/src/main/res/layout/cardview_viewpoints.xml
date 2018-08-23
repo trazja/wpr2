@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/viewpoints_cardview"
+    android:layout_width="match_parent"
+    android:layout_height="400dp"
+    android:background="@color/primary_dark"
+    card_view:cardCornerRadius="4dp">
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/primary_dark">
+
+        <TextView
+            android:id="@+id/viewpoint_name"
+            android:layout_width="294dp"
+            android:layout_height="31dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/nunito_sans_black"
+            android:text="Nazwa"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/accent"
+            android:textSize="24sp"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintHorizontal_bias="0.562"
+            card_view:layout_constraintLeft_toLeftOf="parent"
+            card_view:layout_constraintRight_toRightOf="parent"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent"
+            card_view:layout_constraintVertical_bias="0.501" />
+
+        <TextView
+            android:id="@+id/viewpoint_address"
+            android:layout_width="172dp"
+            android:layout_height="46dp"
+            android:layout_marginBottom="88dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="8dp"
+            android:fontFamily="monospace"
+            android:text="111111111"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/icons"
+            android:textStyle="bold"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintHorizontal_bias="0.068"
+            card_view:layout_constraintLeft_toLeftOf="parent"
+            card_view:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/viewpoint_openinghours"
+            android:layout_width="124dp"
+            android:layout_height="49dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="monospace"
+            android:text="poniedziałek od do"
+            android:textAlignment="center"
+            android:textColor="@color/icons"
+            android:textStyle="bold"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintHorizontal_bias="0.36"
+            card_view:layout_constraintRight_toRightOf="parent"
+            card_view:layout_constraintStart_toEndOf="@+id/viewpoint_address"
+            card_view:layout_constraintTop_toTopOf="parent"
+            card_view:layout_constraintVertical_bias="0.77" />
+
+
+
+        <ImageView
+            android:id="@+id/viewpoint_img"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            card_view:layout_constraintHorizontal_bias="0.0"
+            card_view:layout_constraintLeft_toLeftOf="parent"
+            card_view:layout_constraintRight_toRightOf="parent"
+          />
+
+        <Button
+            android:id="@+id/viewpoint_show_on_map_button"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/show_on_map_normal"
+            android:text="@string/show_on_map"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintHorizontal_bias="0.532"
+            card_view:layout_constraintLeft_toLeftOf="parent"
+            card_view:layout_constraintRight_toRightOf="parent"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent"
+            card_view:layout_constraintVertical_bias="1.0" />
+
+
+
+    </android.support.constraint.ConstraintLayout>
+
+
+
+
+</android.support.v7.widget.CardView>
