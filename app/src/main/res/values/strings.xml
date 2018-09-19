@@ -40,7 +40,7 @@
     <string name="hint_name">Imię</string>
     <string name="hint_email">Email</string>
     <string name="hint_password">Hasło</string>
-    <string name="hint_confirm_password">Confirm Password</string>
+    <string name="hint_confirm_password">Powtórz hasło</string>
     <string name="text_login">Zaloguj się</string>
     <string name="text_register">Zarejestruj się</string>
     <string name="error_message_name">Podaj imię</string>

@@ -40,7 +40,7 @@ public class Viewpoints {
                     R.drawable.garnizonowy),
             new Viewpoints("Mostek Pokutnic  w kościele św. Marii Magdaleny", "ul. Szewska 10",
                     "czynny codziennie, godz. 10.00-19.00",
-                    R.drawable.mostekPokutnic),
+                    R.drawable.mostek_pokutnic),
             new Viewpoints("Taras widokowy w archikatedrze Św. Jana Chrzciciela", "plac Katedralny 18",
                     "poniedziałek - czwartek: 9.30 - 16.30 \n" +
                             "piątek - sobota: 9.30 - 17.00 \n" +

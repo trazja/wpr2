@@ -1,111 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="tryhut.wpr.RouteDetailsActivity"
     tools:layout_editor_absoluteY="81dp">
 
     <RelativeLayout
+        android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:id="@+id/relativeLayout">
+        android:layout_alignParentTop="true">
 
-        <TextView
-            android:id="@+id/routedetalisname"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="16dp"
-            android:text="sdfsdfdf" />
-
-        <TextView
-            android:id="@+id/routedetailskm"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/routedetailslevel"
-            android:layout_alignBottom="@+id/routedetailslevel"
-            android:layout_marginEnd="19dp"
-            android:layout_toStartOf="@+id/routedetailshowonmapbutton"
-            android:text="fsdfdsf" />
-
-        <TextView
-            android:id="@+id/routedetailslevel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginStart="21dp"
-            android:layout_toEndOf="@+id/routedetailshowonmapbutton"
-            android:text="sfdsfds" />
-
-        <Button
-            android:id="@+id/routedetailshowonmapbutton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="11dp" />
-    </RelativeLayout>
-
-
-    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/routedetails_cardview"
-        android:layout_width="match_parent"
-        android:layout_height="550dp">
-
-        <RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        <RelativeLayout
+            android:id="@+id/rl"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-
-            <ImageView
-                android:id="@+id/photo1"
-                android:layout_width="170dp"
-                android:layout_height="170dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginStart="22dp"
-                android:layout_marginTop="23dp" />
-
-            <ImageView
-                android:id="@+id/photo2"
-                android:layout_width="170dp"
-                android:layout_height="170dp"
-
-                android:layout_alignTop="@+id/photo1"
-                android:layout_marginStart="11dp"
-                android:layout_toEndOf="@+id/photo1" />
-
-            <ImageView
-                android:id="@+id/photo3"
-                android:layout_width="300dp"
-                android:layout_height="170dp"
-                android:layout_below="@+id/photo1"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="18dp" />
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true">
 
             <TextView
-                android:id="@+id/description"
-                android:layout_width="match_parent"
+                android:id="@+id/routedetalisname"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_below="@+id/photo3"
-                android:layout_marginTop="64dp"
-                android:text="jijaijdisjdiajsidjiaosjdoooooooooooooooooooooooooooooooooooooo" />
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:text="sdfsdfdf" />
 
+            <TextView
+                android:id="@+id/routedetailskm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/routedetailslevel"
+                android:layout_alignBottom="@+id/routedetailslevel"
+                android:layout_toStartOf="@+id/routedetailshowonmapbutton"
+                android:text="fsdfdsf" />
 
+            <TextView
+                android:id="@+id/routedetailslevel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/routedetalisname"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="15dp"
+                android:layout_toEndOf="@+id/routedetailshowonmapbutton"
+                android:text="sfdsfds" />
+
+            <Button
+                android:id="@+id/routedetailshowonmapbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/routedetailskm"
+                android:layout_centerHorizontal="true" />
         </RelativeLayout>
 
+        <android.support.v7.widget.CardView
+            android:id="@+id/routedetails_cardview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/rl">
 
-    </android.support.v7.widget.CardView>
+
+            <RelativeLayout
+                android:id="@+id/rlcd"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="141dp">
 
 
+                <ImageView
+                    android:id="@+id/photo1"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="25dp" />
+
+                <ImageView
+                    android:id="@+id/photo2"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignTop="@+id/photo1"
+                    android:layout_marginEnd="11dp" />
+
+                <ImageView
+                    android:id="@+id/photo3"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:layout_alignStart="@+id/photo1"
+                    android:layout_below="@+id/photo1"
+                    android:layout_marginTop="7dp" />
+
+                <ImageView
+                    android:id="@+id/photo4"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:layout_alignStart="@+id/photo2"
+                    android:layout_alignTop="@+id/photo3" />
+
+                <TextView
+                    android:id="@+id/description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/photo3"
+                    android:layout_marginTop="16dp" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
 
 
+    </RelativeLayout>
 
-</RelativeLayout>
+</android.support.v4.widget.NestedScrollView>

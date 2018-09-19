@@ -22,7 +22,7 @@
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:fontFamily="@font/finger_paint"
+            android:fontFamily="@font/nunito_sans_black"
             android:gravity="center"
             android:text="Nazwa"
             android:textAlignment="center"

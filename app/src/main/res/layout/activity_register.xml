@@ -45,7 +45,7 @@
             android:rotation="20"
             android:text="@string/app_name_city"
             android:textColor="@color/accent"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:typeface="normal" />
 
         <android.support.design.widget.TextInputLayout

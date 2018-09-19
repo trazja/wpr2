@@ -55,12 +55,7 @@
             android:theme="@style/AppTheme.ActionBar" />
         <activity
             android:name=".MainActivity"
-            android:parentActivityName=".SelectNavigationOrGuideActivity" >  <intent-filter>
-        <action android:name="android.intent.action.MAIN" />
-
-        <category android:name="android.intent.category.LAUNCHER" ></category>
-    </intent-filter>/>
-        </activity>
+            android:parentActivityName=".SelectNavigationOrGuideActivity"></activity>
         <activity android:name=".SelectNavigationOrGuideActivity" />
         <activity
             android:name=".MainMenuActivities.RouteActivity"
@@ -92,7 +87,14 @@
             android:label="@string/title_activity_maps"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.ActionBar" />
-        <activity android:name=".LoginActivity" />
+        <activity android:name=".LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER"></category>
+            </intent-filter>
+            />
+        </activity>
         <activity android:name=".RegisterActivity" />
         <activity
             android:name=".RouteDetailsActivity"
@@ -106,7 +108,8 @@
         <activity
             android:name=".SettingsActivity"
             android:label="@string/title_activity_settings" />
-        <activity android:name=".TouristicInformationActivity"
+        <activity
+            android:name=".TouristicInformationActivity"
             android:label="@string/tourist_information"
             android:parentActivityName=".MainMenuActivities.PlacesMenuActivity"
             android:theme="@style/AppTheme.ActionBar"></activity>

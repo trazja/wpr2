@@ -48,6 +48,10 @@ public class RouteDetailsActivity extends AppCompatActivity {
         ImageView photo3Id = (ImageView)findViewById(R.id.photo3);
         photo3Id.setImageResource(photo3ResourceId);
 
+        int photo4ResourceId = RouteDetails.routeDetails[routeNo].getPhoto4ResourceId();
+        ImageView photo4Id = (ImageView)findViewById(R.id.photo4);
+        photo4Id.setImageResource(photo3ResourceId);
+
         String routeDescription = RouteDetails.routeDetails[routeNo].getRouteDetailsDescription();
         TextView rDescription = (TextView)findViewById(R.id.description);
         rDescription.setText(routeDescription);
@@ -61,6 +65,10 @@ public class RouteDetailsActivity extends AppCompatActivity {
         Glide.with(this)
             .load(photo3ResourceId)
                 .apply(new RequestOptions().skipMemoryCache(true).diskCacheStrategy(DiskCacheStrategy.NONE).centerCrop()).into(photo3Id);
+
+        Glide.with(this)
+                .load(photo4ResourceId)
+                .apply(new RequestOptions().skipMemoryCache(true).diskCacheStrategy(DiskCacheStrategy.NONE).centerCrop()).into(photo4Id);
     }
 
 //
