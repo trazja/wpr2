@@ -21,9 +21,9 @@ public class Route {
 
     public static final Route[] routes = {
             new Route("Grobla Kozanowska", "22.85", "średnia", R.drawable.front1),
-            new Route("Okolice Dworca Głównego PKP", "22.85", "łatwa", R.drawable.front2),
-            new Route("Stare Miasto", "22.85", "łatwa", R.drawable.front3),
-            new Route("Wielka Wyspa i wieża w Kotowicach", "22.85", "trudna", R.drawable.front4),
+            new Route("Okolice Dworca Głównego PKP", "14.56", "łatwa", R.drawable.front2),
+            new Route("Stare Miasto", "17.55", "łatwa", R.drawable.front3),
+            new Route("Dookoła zachodnich osiedli Wrocławia", "29,9", "trudna", R.drawable.front4),
 
     };
 

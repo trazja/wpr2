@@ -44,11 +44,13 @@ public class RouteDetails {
     public static final RouteDetails[] routeDetails = {
             new RouteDetails("Piękna, złota jesień to idealna okazja na rodzinną wycieczkę rowerową. Łatwa i przyjemna trasa przebiegająca przez wrocławskie parki i lasy: Las Pilczycki, Las Kuźnicki, Park Tysiąclecia czy mało znany, " +
                     "ale równie piękny Park Popowicki o tej porze roku są niesamowicie klimatyczne. Oprócz wrocławskiej flory doświadczymy również trochę miejskich akcentów, takich jak świetnie przygotowana ścieżka rowerowa na ul. Strzegomskiej." +
-                    " Kulminacyjnym momentem trasy jest  tytułowa Grobla Kozanowska z komfortową, szutrową nawierzchnią. " +
-                    " Dla fanów single tracków najciekawszy docinek znajduje się w Lesie Pilczyckim, gdzie zachęcamy również do krótkiego postoju przy Jazie Rędzin skąd rozprzestrzenia się niesamowity widok na Most Rędziński.&#xd;\n" +
+                    " Kulminacyjnym momentem trasy jest  tytułowa Grobla Kozanowska z komfortową, szutrową nawierzchnią." +
+                    " Dla fanów single tracków najciekawszy docinek znajduje się w Lesie Pilczyckim, gdzie zachęcamy również do krótkiego postoju przy Jazie Rędzin skąd rozprzestrzenia się niesamowity widok na Most Rędziński.\n" +
                     "Trasa jest idealna dla każdego, również dla osób które nie jeżdżą na rowerze na co dzień.\n" +
-                    "Na odcinku za Lasem Kuźnickim wymagane jest przeniesienie rowerów przez czynne torowisko kolejowe, dlatego prosimy o szczególną uwagę w trym miejscu :)&#xd;\n"
-                    , R.drawable.grobla1, R.drawable.grobla2, R.drawable.grobla3, R.drawable.grobla3),
-            new RouteDetails("", R.drawable.pkp1, R.drawable.pkp2, R.drawable.pkp3, R.drawable.pkp3)
+                    "Na odcinku za Lasem Kuźnickim wymagane jest przeniesienie rowerów przez czynne torowisko kolejowe, dlatego prosimy o szczególną uwagę w tym miejscu :)\n"
+                    , R.drawable.grobla1, R.drawable.grobla2, R.drawable.grobla3, R.drawable.grobla4),
+            new RouteDetails("", R.drawable.pkp1, R.drawable.pkp2, R.drawable.pkp3, R.drawable.pkp4),
+            new RouteDetails("", R.drawable.pkp1, R.drawable.pkp2, R.drawable.pkp3, R.drawable.pkp3),
+            new RouteDetails("", R.drawable.zachodnie1, R.drawable.zachodnie2, R.drawable.zachodnie3, R.drawable.zachodnie4)
     };
 }

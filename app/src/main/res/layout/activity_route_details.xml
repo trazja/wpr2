@@ -6,21 +6,24 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="tryhut.wpr.RouteDetailsActivity"
-    tools:layout_editor_absoluteY="81dp">
+    tools:layout_editor_absoluteY="81dp"
+    android:background="@color/icons">
 
     <RelativeLayout
         android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true">
+        android:layout_alignParentTop="true"
+        android:background="@color/primary">
 
         <RelativeLayout
             android:id="@+id/rl"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true">
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="8dp">
 
             <TextView
                 android:id="@+id/routedetalisname"
@@ -29,50 +32,59 @@
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="16dp"
-                android:text="sdfsdfdf" />
+                android:text="sdfsdfdf"
+                android:textColor="@color/textColor"
+                android:textSize="24sp"
+                android:textAlignment="center"
+                android:fontFamily="@font/nunito_sans_black"
+                />
 
             <TextView
                 android:id="@+id/routedetailskm"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignBaseline="@+id/routedetailslevel"
-                android:layout_alignBottom="@+id/routedetailslevel"
+                android:layout_below="@+id/routedetalisname"
+                android:layout_marginEnd="16dp"
                 android:layout_toStartOf="@+id/routedetailshowonmapbutton"
-                android:text="fsdfdsf" />
+                android:text="fsdfdsf"
+                android:textColor="@color/textColor" />
 
             <TextView
                 android:id="@+id/routedetailslevel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/routedetalisname"
-                android:layout_marginStart="18dp"
-                android:layout_marginTop="15dp"
+                android:layout_marginStart="17dp"
                 android:layout_toEndOf="@+id/routedetailshowonmapbutton"
-                android:text="sfdsfds" />
+                android:text="sfdsfds"
+                android:textColor="@color/textColor" />
 
             <Button
                 android:id="@+id/routedetailshowonmapbutton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/routedetailskm"
-                android:layout_centerHorizontal="true" />
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/simple_button"
+                android:text="@string/show_on_map" />
         </RelativeLayout>
 
         <android.support.v7.widget.CardView
             android:id="@+id/routedetails_cardview"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/rl">
+            android:layout_below="@+id/rl"
+            android:background="@color/secondaryColor">
 
 
             <RelativeLayout
                 android:id="@+id/rlcd"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_alignParentBottom="true"
                 android:layout_alignParentStart="true"
-                android:layout_marginBottom="141dp">
+                android:layout_alignParentTop="true"
+                android:background="@color/secondaryColor">
 
 
                 <ImageView
@@ -114,7 +126,9 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
                     android:layout_below="@+id/photo3"
-                    android:layout_marginTop="16dp" />
+                    android:layout_marginTop="16dp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/textColor" />
 
             </RelativeLayout>
 
