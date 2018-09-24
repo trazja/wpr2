@@ -42,7 +42,7 @@ public class WcFragment extends Fragment {
 
 
         WcAdapter adapter =
-                new WcAdapter(Wc.wcs);
+                new WcAdapter(Wc.wcs,getContext());
         wcRecycler.setAdapter(adapter);
         LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
         wcRecycler.setLayoutManager(layoutManager);

@@ -1,5 +1,6 @@
 package tryhut.wpr;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
@@ -8,8 +9,11 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import tryhut.wpr.MainMenuActivities.MapsActivity;
 
 
 /**
@@ -19,9 +23,11 @@ import android.widget.TextView;
 public class TouristInformationAdapter extends RecyclerView.Adapter<TouristInformationAdapter.ViewHolder> {
 
     private TouristicInformation[] touristicInformations;
+    private Context ctx;
 
-    public TouristInformationAdapter(TouristicInformation[] tiInfo) {
+    public TouristInformationAdapter(TouristicInformation[] tiInfo, Context context) {
         this.touristicInformations = tiInfo;
+        this.ctx = context;
     }
 
 
@@ -33,6 +39,7 @@ public class TouristInformationAdapter extends RecyclerView.Adapter<TouristInfor
         private TextView tiAddresses;
         private TextView tiEmails;
         private CardView cardView;
+        private Button tibutton;
 
         public ViewHolder(CardView v) {
             super(v);
@@ -42,6 +49,7 @@ public class TouristInformationAdapter extends RecyclerView.Adapter<TouristInfor
             tiOpeningHours = (TextView) cardView.findViewById(R.id.ti_openinghours);
             tiAddresses = (TextView) cardView.findViewById(R.id.ti_addressess);
             tiEmails = (TextView) cardView.findViewById(R.id.ti_emails);
+            tibutton = (Button) cardView.findViewById(R.id.show_on_map_button_ti);
         }
     }
 
@@ -58,6 +66,7 @@ public class TouristInformationAdapter extends RecyclerView.Adapter<TouristInfor
     public void onBindViewHolder(TouristInformationAdapter.ViewHolder holder, final int position) {
         TouristicInformation touristicInformation = touristicInformations[position];
         CardView cardView = holder.cardView;
+        Button tibutton = holder.tibutton;
 
         holder.tinames.setText(touristicInformation.getName());
         holder.tiPhoneNumbers.setText(touristicInformation.getPhoneNumber());
@@ -65,6 +74,13 @@ public class TouristInformationAdapter extends RecyclerView.Adapter<TouristInfor
         holder.tiAddresses.setText(touristicInformation.getAddress());
         holder.tiOpeningHours.setText(touristicInformation.getOpeningHours());
 
+
+        holder.tibutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                v.getContext().startActivity(new Intent(ctx,MapsActivity.class));
+            }
+        });
     }
 
 

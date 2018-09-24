@@ -114,7 +114,7 @@ android:background="@color/primary_dark">
             card_view:layout_constraintVertical_bias="0.665" />
 
         <Button
-            android:id="@+id/show_on_map_button"
+            android:id="@+id/show_on_map_button_ti"
             android:layout_width="90dp"
             android:layout_height="40dp"
             android:layout_marginBottom="16dp"

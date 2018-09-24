@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.ImageView;
 import android.graphics.drawable.Drawable;
@@ -41,6 +42,7 @@ class CaptionedImagesAdapter extends RecyclerView.Adapter<CaptionedImagesAdapter
     public CaptionedImagesAdapter(Route[] routes) {
 
         this.routeList = routes;
+
 
     }
 
@@ -101,6 +103,8 @@ class CaptionedImagesAdapter extends RecyclerView.Adapter<CaptionedImagesAdapter
 
             }
         });
+
+
 
         Glide.with(cardView.getContext())
                 .load(routeList[position].getImageResourceId())

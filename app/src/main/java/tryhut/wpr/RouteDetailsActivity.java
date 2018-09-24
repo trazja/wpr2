@@ -1,8 +1,11 @@
 package tryhut.wpr;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -10,6 +13,8 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.RequestOptions;
 
+import tryhut.wpr.MainMenuActivities.MapsActivity;
+import tryhut.wpr.MainMenuActivities.PlacesMenuActivity;
 import tryhut.wpr.MainMenuActivities.Route;
 import tryhut.wpr.MainMenuActivities.RouteDetails;
 
@@ -55,6 +60,15 @@ public class RouteDetailsActivity extends AppCompatActivity {
         String routeDescription = RouteDetails.routeDetails[routeNo].getRouteDetailsDescription();
         TextView rDescription = (TextView)findViewById(R.id.description);
         rDescription.setText(routeDescription);
+
+        Button button = (Button) findViewById(R.id.routedetailshowonmapbutton);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent routeIntent = new Intent(RouteDetailsActivity.this, MapsActivity.class);
+                RouteDetailsActivity.this.startActivity(routeIntent);
+            }
+        });
 
         Glide.with(this)
             .load(photo1ResourceId)

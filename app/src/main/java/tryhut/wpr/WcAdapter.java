@@ -1,11 +1,17 @@
 package tryhut.wpr;
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import tryhut.wpr.MainMenuActivities.MapsActivity;
 
 
 /**
@@ -15,9 +21,11 @@ import android.widget.TextView;
 public class WcAdapter extends RecyclerView.Adapter<WcAdapter.ViewHolder> {
 
     private Wc[] wcList;
+    private Context ctx;
 
-    public WcAdapter(Wc[] wcs) {
+    public WcAdapter(Wc[] wcs, Context context) {
         this.wcList = wcs;
+        this.ctx = context;
     }
 
 
@@ -25,6 +33,7 @@ public class WcAdapter extends RecyclerView.Adapter<WcAdapter.ViewHolder> {
         private TextView wcName;
         private TextView wcAddress;
         private TextView wcOpeningHours;
+        private Button wcButton;
 
 
         private CardView cardView;
@@ -35,6 +44,7 @@ public class WcAdapter extends RecyclerView.Adapter<WcAdapter.ViewHolder> {
             wcName = (TextView) cardView.findViewById(R.id.wc_name);
             wcAddress = (TextView) cardView.findViewById(R.id.wc_address);
             wcOpeningHours = (TextView) cardView.findViewById(R.id.wc_openinghours);
+            wcButton = (Button) cardView.findViewById(R.id.show_on_map_button_wc);
 
         }
     }
@@ -52,11 +62,17 @@ public class WcAdapter extends RecyclerView.Adapter<WcAdapter.ViewHolder> {
     public void onBindViewHolder(WcAdapter.ViewHolder holder, int position) {
         Wc wc = wcList[position];
         CardView cardView = holder.cardView;
+        Button wcbutton = holder.wcButton;
         holder.wcName.setText(wc.getWcName());
         holder.wcAddress.setText(wc.getWcAddress());
         holder.wcOpeningHours.setText(wc.getWcOpeningHours());
 
-
+        holder.wcButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                v.getContext().startActivity(new Intent(ctx,MapsActivity.class));
+            }
+        });
     }
 
     @Override

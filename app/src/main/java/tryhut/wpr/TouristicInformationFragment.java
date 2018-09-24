@@ -48,7 +48,7 @@ public class TouristicInformationFragment extends Fragment {
         }
 
         TouristInformationAdapter adapter =
-                new TouristInformationAdapter(TouristicInformation.touristicInformations);
+                new TouristInformationAdapter(TouristicInformation.touristicInformations,getContext());
         tiRecycler.setAdapter(adapter);
         LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
         tiRecycler.setLayoutManager(layoutManager);

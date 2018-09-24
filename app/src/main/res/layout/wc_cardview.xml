@@ -82,7 +82,7 @@
                 card_view:layout_constraintVertical_bias="1.0" />
 
             <Button
-                android:id="@+id/show_on_map_button"
+                android:id="@+id/show_on_map_button_wc"
                 android:layout_width="99dp"
                 android:layout_height="40dp"
                 android:layout_marginBottom="16dp"
